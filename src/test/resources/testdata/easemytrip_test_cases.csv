@@ -1,0 +1,616 @@
+Module Name,Test Case ID,Tester Name,Test Case Description,Prerequisites,Environment / OS,Device,Browser,Test Scenario,Test Steps,Test Input,Expected Result,Actual Result,Status,Priority,Test Type,Execution Date,Comments
+Login,test_001,Ranveer,To check login functionality of EaseMyTrip website.,Stable internet connection; browser installed.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the user can log in with valid credentials.,"1. Open EaseMyTrip.
+2. Click Login.
+3. Enter valid credentials.
+4. Submit.",Valid registered credentials,User should log in successfully.,To be tested,Not Run,High,Functional,,
+Flights,test_002,Ranveer,To check whether the Flights button is visible.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the Flights option is visible in the navigation bar.,"1. Open EaseMyTrip.
+2. Observe the navigation bar.",N/A,Flights button should be visible.,To be tested,Not Run,Medium,UI,,
+Flights,test_003,Ranveer,To check the functionality of the Flights button.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that clicking Flights opens the flight search section.,"1. Open EaseMyTrip.
+2. Click Flights.",N/A,Flight search section should be displayed.,To be tested,Not Run,High,Functional,,
+Flights,test_004,Ranveer,To check flight search with valid details.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that users can search for flights using valid details.,"1. Open Flights.
+2. Enter source and destination.
+3. Select travel date.
+4. Click Search.",Source: Pune; Destination: Delhi; Date: Valid future date,"Available flights should be displayed, if available.",To be tested,Not Run,High,Functional,,
+Flights,test_005,Ranveer,To check flight search with the same source and destination.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the system handles identical source and destination cities.,"1. Open Flights.
+2. Select the same city for source and destination.
+3. Click Search.",Source: Pune; Destination: Pune,System should prevent the search or display an appropriate validation message.,To be tested,Not Run,Medium,Negative,,
+Flights,test_006,Ranveer,To check flight search without selecting a source city.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify validation when the source city is missing.,"1. Open Flights.
+2. Select a destination.
+3. Leave source empty.
+4. Click Search.",Destination: Delhi; Source: Empty,System should request the source city.,To be tested,Not Run,Medium,Negative,,
+Flights,test_007,Ranveer,To check the return date for a round trip.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the return date cannot be earlier than the departure date.,"1. Select a departure date.
+2. Select an earlier return date.",Departure: 20-Nov-2026; Return: 18-Nov-2026,System should prevent selection of an invalid return date.,To be tested,Not Run,Medium,Negative,,
+Flights,test_008,Ranveer,To check the passenger selection functionality.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that users can select the required number of passengers.,"1. Open Flights.
+2. Open passenger selection.
+3. Change passenger count.
+4. Confirm selection.",2 adults,Selected passenger count should be displayed correctly.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_009,Ranveer,To check whether the Hotels button is visible.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the Hotels option is visible in the navigation bar.,"1. Open EaseMyTrip.
+2. Observe the navigation bar.",N/A,Hotels button should be visible.,To be tested,Not Run,Medium,UI,,
+Hotels,test_010,Ranveer,To check hotel search with valid details.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that users can search for hotels.,"1. Open Hotels.
+2. Enter a destination.
+3. Select check-in and check-out dates.
+4. Click Search.",Destination: Mumbai; Valid future dates,"Matching hotels should be displayed, if available.",To be tested,Not Run,High,Functional,,
+Website UI,test_011,Ranveer,To check the website logo visibility.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the EaseMyTrip logo is visible on the homepage.,"1. Open EaseMyTrip.
+2. Observe the website header.",N/A,Website logo should be visible.,To be tested,Not Run,Low,UI,,
+Website UI,test_012,Ranveer,To check navigation using the website logo.,Website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that clicking the logo navigates to the homepage.,"1. Open another section.
+2. Click the website logo.",N/A,Homepage should be displayed.,To be tested,Not Run,Low,Functional,,
+Login,test_013,Ranveer,To check login with an invalid password.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that login fails with a wrong password.,"1. Open EaseMyTrip.
+2. Click Login.
+3. Enter registered email and wrong password.
+4. Submit.",Email: valid; Password: wrong123,"An ""invalid credentials"" error should be displayed.",To be tested,Not Run,High,Negative,,
+Login,test_014,Ranveer,To check login with an unregistered email.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that unregistered email cannot log in.,"1. Open Login.
+2. Enter unregistered email.
+3. Enter any password.
+4. Submit.",Email: nouser@example.com,Error message for unregistered account should be shown.,To be tested,Not Run,High,Negative,,
+Login,test_015,Ranveer,To check login with empty fields.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that validation appears when both fields are empty.,"1. Open Login.
+2. Leave all fields empty.
+3. Click Submit.",Empty fields,Mandatory field validation message should be displayed.,To be tested,Not Run,High,Negative,,
+Login,test_016,Ranveer,To check login with an invalid email format.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an invalid email format is rejected.,"1. Open Login.
+2. Enter email without ""@"".
+3. Submit.",Email: user.example.com,Invalid email format message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Login,test_017,Ranveer,To check the password masking.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that password characters are hidden by default.,"1. Open Login.
+2. Type in the password field.",Password: Test@1234,Password should appear as dots/asterisks.,To be tested,Not Run,Medium,UI,,
+Login,test_018,Ranveer,To check the show/hide password option.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the user can toggle password visibility.,"1. Open Login.
+2. Type a password.
+3. Click the eye icon.",Password: Test@1234,Password should toggle between hidden and visible.,To be tested,Not Run,Low,Functional,,
+Login,test_019,Ranveer,To check login using OTP.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the user can log in via an OTP sent to mobile/email.,"1. Open Login.
+2. Choose OTP login.
+3. Enter mobile number.
+4. Enter received OTP.
+5. Submit.",Valid mobile number; valid OTP,User should log in successfully.,To be tested,Not Run,High,Functional,,
+Login,test_020,Ranveer,To check login with an incorrect OTP.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a wrong OTP is rejected.,"1. Open Login.
+2. Choose OTP login.
+3. Enter mobile number.
+4. Enter wrong OTP.
+5. Submit.",OTP: 000000,Invalid OTP error should be displayed.,To be tested,Not Run,High,Negative,,
+Login,test_021,Ranveer,To check the Resend OTP option.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a new OTP can be requested.,"1. Open OTP login.
+2. Wait for the timer.
+3. Click Resend OTP.",Valid mobile number,A new OTP should be sent and the timer reset.,To be tested,Not Run,Medium,Functional,,
+Login,test_022,Ranveer,To check the forgot password link.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the password reset flow opens.,"1. Open Login.
+2. Click Forgot Password.
+3. Enter registered email.
+4. Submit.",Registered email,Password reset link/OTP should be sent.,To be tested,Not Run,Medium,Functional,,
+Login,test_023,Ranveer,To check new user registration.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a new user can sign up with valid details.,"1. Open Login.
+2. Click Sign Up.
+3. Fill in details.
+4. Submit.","Name, email, mobile, password",Account should be created and user logged in.,To be tested,Not Run,High,Functional,,
+Login,test_024,Ranveer,To check sign up with an already registered email.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that duplicate registration is prevented.,"1. Open Sign Up.
+2. Enter an existing email.
+3. Submit.",Existing registered email,"""Already registered"" message should be displayed.",To be tested,Not Run,Medium,Negative,,
+Login,test_025,Ranveer,To check the logout functionality.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a logged-in user can log out.,"1. Log in.
+2. Click the profile menu.
+3. Click Logout.",N/A,User should be logged out and Login option shown.,To be tested,Not Run,High,Functional,,
+Login,test_026,Ranveer,To check the session after logout.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the Back button does not restore the session.,"1. Log in.
+2. Log out.
+3. Click browser Back.",N/A,User should remain logged out.,To be tested,Not Run,Medium,Security,,
+Login,test_027,Ranveer,To check login with Google/social account.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that social login works.,"1. Open Login.
+2. Click Continue with Google.
+3. Select an account.",Valid Google account,User should log in successfully.,To be tested,Not Run,Medium,Functional,,
+Flights,test_028,Ranveer,To check the one-way trip option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that One Way can be selected.,"1. Open Flights.
+2. Select One Way.",N/A,One Way should be selected and only the departure date shown.,To be tested,Not Run,High,Functional,,
+Flights,test_029,Ranveer,To check the round trip option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Round Trip shows a return date field.,"1. Open Flights.
+2. Select Round Trip.",N/A,Departure and return date fields should be displayed.,To be tested,Not Run,High,Functional,,
+Flights,test_030,Ranveer,To check the multi-city option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that multi-city allows more than one leg.,"1. Open Flights.
+2. Select Multi City.
+3. Add a second leg.",Pune-Delhi; Delhi-Goa,Multiple flight legs should be accepted.,To be tested,Not Run,Medium,Functional,,
+Flights,test_031,Ranveer,To check the source auto-suggestion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that typing shows matching airports.,"1. Open Flights.
+2. Type ""Pun"" in From.",Pun,Pune should appear in suggestions.,To be tested,Not Run,Medium,Functional,,
+Flights,test_032,Ranveer,To check the destination auto-suggestion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that destination suggestions are shown.,"1. Open Flights.
+2. Type ""Del"" in To.",Del,Delhi should appear in suggestions.,To be tested,Not Run,Medium,Functional,,
+Flights,test_033,Ranveer,To check the swap button.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that source and destination can be swapped.,"1. Select source and destination.
+2. Click the swap icon.",Pune; Delhi,From and To values should be interchanged.,To be tested,Not Run,Low,Functional,,
+Flights,test_034,Ranveer,To check an invalid city name.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that unknown city is handled.,1. Type an invalid city in From.,xyzabc,"""No result found"" should be displayed.",To be tested,Not Run,Low,Negative,,
+Flights,test_035,Ranveer,To check selecting a past date.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that past dates are not selectable.,1. Open the date picker.,Yesterday's date,Past dates should be disabled.,To be tested,Not Run,High,Negative,,
+Flights,test_036,Ranveer,To check the date picker.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the calendar opens with today highlighted.,1. Click the Departure field.,N/A,Calendar should open with the current date highlighted.,To be tested,Not Run,Medium,UI,,
+Flights,test_037,Ranveer,To check the maximum advance booking date.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that dates beyond the allowed window are blocked.,"1. Open the date picker.
+2. Navigate far ahead.",Date more than 1 year ahead,Unavailable dates should be disabled.,To be tested,Not Run,Low,Negative,,
+Flights,test_038,Ranveer,To check adding infants and children.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,"Verify that adult, child and infant counts can be set.","1. Open passenger selector.
+2. Increase each count.","1 adult, 1 child, 1 infant",Counts should update correctly.,To be tested,Not Run,Medium,Functional,,
+Flights,test_039,Ranveer,To check the maximum passenger limit.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that passengers cannot exceed the limit.,"1. Open passenger selector.
+2. Keep increasing adults.",More than 9 passengers,System should stop at the maximum limit.,To be tested,Not Run,Medium,Negative,,
+Flights,test_040,Ranveer,To check infants exceeding adults.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that infants cannot exceed adults.,"1. Select 1 adult.
+2. Increase infants to 2.","1 adult, 2 infants",Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_041,Ranveer,To check travel class selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Economy/Business class can be chosen.,"1. Open class dropdown.
+2. Select Business.",Business,Selected class should be shown.,To be tested,Not Run,Medium,Functional,,
+Flights,test_042,Ranveer,To check the flight results page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,"Verify that results list shows airline, time, duration and price.",1. Search flights with valid details.,Pune to Delhi,"Each result should show airline, times, duration and fare.",To be tested,Not Run,High,Functional,,
+Flights,test_043,Ranveer,To check sorting flights by price.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that low-to-high price sort works.,"1. Search flights.
+2. Sort by Price.",N/A,Flights should be ordered by ascending fare.,To be tested,Not Run,Medium,Functional,,
+Flights,test_044,Ranveer,To check the airline filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that filtering by airline works.,"1. Search flights.
+2. Select an airline filter.",IndiGo,Only selected airline flights should be shown.,To be tested,Not Run,Medium,Functional,,
+Flights,test_045,Ranveer,To check the non-stop filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that non-stop filter works.,"1. Search flights.
+2. Select Non-stop.",N/A,Only non-stop flights should be displayed.,To be tested,Not Run,Medium,Functional,,
+Flights,test_046,Ranveer,To check the departure time filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that time-slot filter works.,"1. Search flights.
+2. Select Morning departure.",Morning,Only morning flights should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_047,Ranveer,To check the price range slider.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the price slider limits results.,"1. Search flights.
+2. Adjust the price slider.",Max price set,Flights above the limit should be hidden.,To be tested,Not Run,Low,Functional,,
+Flights,test_048,Ranveer,To check the flight details expansion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that details can be expanded.,"1. Search flights.
+2. Click Flight Details.",N/A,"Baggage, fare rules and itinerary should be shown.",To be tested,Not Run,Low,Functional,,
+Flights,test_049,Ranveer,To check the Book Now button.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that selecting a flight opens the review page.,"1. Search flights.
+2. Click Book Now.",N/A,Booking/review page should open.,To be tested,Not Run,High,Functional,,
+Flights,test_050,Ranveer,To check passenger details form validation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that mandatory fields are enforced.,"1. Go to traveller details.
+2. Leave name empty.
+3. Continue.",Empty name,Validation error should be displayed.,To be tested,Not Run,High,Negative,,
+Flights,test_051,Ranveer,To check the contact details on booking.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid mobile number is rejected.,"1. Go to traveller details.
+2. Enter invalid mobile.
+3. Continue.",Mobile: 12345,Invalid mobile number message should be shown.,To be tested,Not Run,Medium,Negative,,
+Flights,test_052,Ranveer,To check the fare breakup.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,"Verify that base fare, taxes and total are shown.","1. Open the review page.
+2. View the fare summary.",N/A,Fare breakup should add up to the total.,To be tested,Not Run,High,Functional,,
+Flights,test_053,Ranveer,To check the no-flights-available case.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a message appears when none are found.,1. Search a route with no flights.,Rare route/date,"""No flights found"" message should be displayed.",To be tested,Not Run,Medium,Negative,,
+Flights,test_054,Ranveer,To check the Modify Search option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that search can be modified from results.,"1. Search flights.
+2. Click Modify Search.
+3. Change date.",New date,Results should refresh for the new date.,To be tested,Not Run,Low,Functional,,
+Flights,test_055,Ranveer,To check the Round Trip results.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that onward and return flights are shown.,1. Search a round trip.,Pune-Delhi; return date,Onward and return flight lists should be displayed.,To be tested,Not Run,Medium,Functional,,
+Flights,test_056,Ranveer,To check the Flight Status/PNR option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a valid PNR shows trip details.,"1. Open Check PNR.
+2. Enter PNR.",Valid PNR,Booking details should be displayed.,To be tested,Not Run,Low,Functional,,
+Hotels,test_057,Ranveer,To check the Hotels page opening.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that clicking Hotels opens the hotel search.,"1. Open EaseMyTrip.
+2. Click Hotels.",N/A,Hotel search section should be displayed.,To be tested,Not Run,High,Functional,,
+Hotels,test_058,Ranveer,To check the destination suggestion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that city suggestions appear for hotels.,"1. Open Hotels.
+2. Type ""Goa"".",Goa,Goa should appear in suggestions.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_059,Ranveer,To check the check-out date before check-in.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid date range is prevented.,"1. Select check-in.
+2. Try an earlier check-out.",In: 20-Nov; Out: 18-Nov,Earlier check-out dates should be disabled.,To be tested,Not Run,Medium,Negative,,
+Hotels,test_060,Ranveer,To check room and guest selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that rooms and guests can be changed.,"1. Open Rooms & Guests.
+2. Change counts.","2 rooms, 4 adults",Selection should update correctly.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_061,Ranveer,To check search with empty destination.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that destination is mandatory.,"1. Open Hotels.
+2. Leave destination empty.
+3. Click Search.",Empty destination,Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Hotels,test_062,Ranveer,To check the hotel results list.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,"Verify that results show name, rating, price and image.",1. Search hotels.,Mumbai,Each result should show key details.,To be tested,Not Run,High,Functional,,
+Hotels,test_063,Ranveer,To check sorting hotels by price.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that price sorting works.,"1. Search hotels.
+2. Sort by price.",N/A,Hotels should be ordered by price.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_064,Ranveer,To check the star rating filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that star filter works.,"1. Search hotels.
+2. Select 4 star.",4 star,Only 4-star hotels should be displayed.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_065,Ranveer,To check the price filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that budget filter limits results.,"1. Search hotels.
+2. Set price range.",1000-3000,Hotels outside the range should be hidden.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_066,Ranveer,To check the amenities filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that amenity filter works.,"1. Search hotels.
+2. Select Free WiFi.",Free WiFi,Only hotels with WiFi should be shown.,To be tested,Not Run,Low,Functional,,
+Hotels,test_067,Ranveer,To check the hotel detail page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that clicking a hotel opens its details.,"1. Search hotels.
+2. Click a hotel.",N/A,"Photos, amenities, rooms and reviews should be displayed.",To be tested,Not Run,Medium,Functional,,
+Hotels,test_068,Ranveer,To check the hotel photo gallery.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that images can be browsed.,"1. Open a hotel.
+2. Click the image gallery.
+3. Move next/previous.",N/A,Images should change correctly.,To be tested,Not Run,Low,UI,,
+Hotels,test_069,Ranveer,To check room selection and booking.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a room can be selected.,"1. Open a hotel.
+2. Select a room.
+3. Click Book.",N/A,Booking review page should open.,To be tested,Not Run,High,Functional,,
+Hotels,test_070,Ranveer,To check the map view.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that hotels are shown on a map.,"1. Search hotels.
+2. Click Map View.",N/A,Hotels should be marked on the map.,To be tested,Not Run,Low,Functional,,
+Trains,test_071,Ranveer,To check the Trains option visibility.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the Trains option is visible.,"1. Open EaseMyTrip.
+2. Observe the navigation bar.",N/A,Trains option should be visible.,To be tested,Not Run,Medium,UI,,
+Trains,test_072,Ranveer,To check train search with valid details.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that users can search trains.,"1. Open Trains.
+2. Enter stations and date.
+3. Search.",Pune to Delhi; future date,Available trains should be displayed.,To be tested,Not Run,High,Functional,,
+Trains,test_073,Ranveer,To check the same source and destination station.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that identical stations are rejected.,"1. Open Trains.
+2. Enter the same station.
+3. Search.",Pune; Pune,Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Trains,test_074,Ranveer,To check train class filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that class filter (SL/3A/2A) works.,"1. Search trains.
+2. Select 3A.",3A,Only trains with 3A should be shown.,To be tested,Not Run,Low,Functional,,
+Trains,test_075,Ranveer,To check the PNR status.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that valid PNR returns status.,"1. Open PNR Status.
+2. Enter 10-digit PNR.",Valid PNR,PNR status should be displayed.,To be tested,Not Run,Medium,Functional,,
+Trains,test_076,Ranveer,To check an invalid PNR.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid PNR is handled.,"1. Open PNR Status.
+2. Enter invalid PNR.",123,Error message should be displayed.,To be tested,Not Run,Low,Negative,,
+Buses,test_077,Ranveer,To check the Buses option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that clicking Buses opens bus search.,"1. Open EaseMyTrip.
+2. Click Buses.",N/A,Bus search section should be displayed.,To be tested,Not Run,Medium,Functional,,
+Buses,test_078,Ranveer,To check bus search with valid details.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that users can search buses.,"1. Open Buses.
+2. Enter route and date.
+3. Search.",Pune to Mumbai,Available buses should be displayed.,To be tested,Not Run,High,Functional,,
+Buses,test_079,Ranveer,To check the seat selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that seats can be selected.,"1. Search buses.
+2. Click View Seats.
+3. Select a seat.",1 seat,Selected seat should be highlighted with fare.,To be tested,Not Run,High,Functional,,
+Buses,test_080,Ranveer,To check the AC/Non-AC filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that bus type filter works.,"1. Search buses.
+2. Select AC.",AC,Only AC buses should be displayed.,To be tested,Not Run,Low,Functional,,
+Buses,test_081,Ranveer,To check the boarding point selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that boarding point can be chosen.,"1. Select a seat.
+2. Choose boarding point.",N/A,Selected boarding point should be shown.,To be tested,Not Run,Low,Functional,,
+Cabs,test_082,Ranveer,To check the Cabs option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the cab booking section opens.,"1. Open EaseMyTrip.
+2. Click Cabs.",N/A,Cab booking section should be displayed.,To be tested,Not Run,Low,Functional,,
+Cabs,test_083,Ranveer,To check cab search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that cabs can be searched with valid details.,"1. Open Cabs.
+2. Enter pickup, drop and date.
+3. Search.",Pune to Mumbai,Available cabs should be displayed.,To be tested,Not Run,Medium,Functional,,
+Holidays,test_084,Ranveer,To check the Holidays option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that holiday packages page opens.,"1. Open EaseMyTrip.
+2. Click Holidays.",N/A,Holiday packages should be displayed.,To be tested,Not Run,Low,Functional,,
+Holidays,test_085,Ranveer,To check the package search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that package search works.,"1. Open Holidays.
+2. Enter a destination.
+3. Search.",Goa,Matching packages should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_086,Ranveer,To check the payment options display.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that all payment modes are shown.,1. Proceed to the payment page.,N/A,"Cards, UPI, Net Banking and Wallets should be displayed.",To be tested,Not Run,High,UI,,
+Payment,test_087,Ranveer,To check card payment with invalid card number.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid card is rejected.,"1. Open the payment page.
+2. Choose Card.
+3. Enter an invalid number.",Card: 1234 5678 9012 3456,Invalid card message should be displayed.,To be tested,Not Run,High,Negative,,
+Payment,test_088,Ranveer,To check expired card validation.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an expired card is rejected.,"1. Choose Card.
+2. Enter an expired date.",Expiry: 01/20,Expired card message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Payment,test_089,Ranveer,To check CVV validation.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that CVV must be 3 digits.,"1. Choose Card.
+2. Enter a 2 digit CVV.",CVV: 12,CVV validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Payment,test_090,Ranveer,To check UPI with invalid ID.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid UPI ID is rejected.,"1. Choose UPI.
+2. Enter invalid ID.",abc@invalid,Invalid UPI ID message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Payment,test_091,Ranveer,To check net banking bank list.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that banks are listed.,1. Choose Net Banking.,N/A,List of banks should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_092,Ranveer,To check payment timer/session timeout.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the payment session expires after the timeout.,"1. Open payment page.
+2. Wait until timer ends.",N/A,Session expired message should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_093,Ranveer,To check the payment success page.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a confirmation appears after success.,1. Complete a test payment.,Sandbox/test payment,Booking confirmation with booking ID should be shown.,To be tested,Not Run,High,Functional,,
+Payment,test_094,Ranveer,To check cancelling during payment.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that cancel returns the user safely.,"1. Open payment gateway.
+2. Cancel the payment.",N/A,User should return to the booking page without being charged.,To be tested,Not Run,Medium,Functional,,
+Offers,test_095,Ranveer,To check the coupon field.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a valid coupon applies a discount.,"1. Open review page.
+2. Enter coupon.
+3. Click Apply.",Valid coupon code,Discount should be applied and the total updated.,To be tested,Not Run,High,Functional,,
+Offers,test_096,Ranveer,To check an invalid coupon.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an invalid coupon is rejected.,"1. Enter an invalid coupon.
+2. Click Apply.",INVALID123,Invalid coupon message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Offers,test_097,Ranveer,To check the Offers page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the Offers page loads.,1. Click Offers.,N/A,Available offers should be displayed.,To be tested,Not Run,Low,Functional,,
+Offers,test_098,Ranveer,To check the offer filter by category.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that category filters work.,"1. Open Offers.
+2. Select Flights category.",Flights,Only flight offers should be displayed.,To be tested,Not Run,Low,Functional,,
+My Trips,test_099,Ranveer,To check the My Trips page.,Registered user with at least one booking.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that bookings are listed for logged-in users.,"1. Log in.
+2. Open My Trips.",N/A,Past and upcoming bookings should be displayed.,To be tested,Not Run,High,Functional,,
+My Trips,test_100,Ranveer,To check My Trips without login.,Registered user with at least one booking.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that login is required.,1. Open My Trips without logging in.,N/A,User should be asked to log in.,To be tested,Not Run,Medium,Security,,
+My Trips,test_101,Ranveer,To check booking cancellation.,Registered user with at least one booking.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a booking can be cancelled.,"1. Open My Trips.
+2. Select booking.
+3. Click Cancel.",Test booking,Cancellation should be confirmed with refund details.,To be tested,Not Run,High,Functional,,
+My Trips,test_102,Ranveer,To check ticket download.,Registered user with at least one booking.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the e-ticket can be downloaded.,"1. Open My Trips.
+2. Click Download Ticket.",N/A,Ticket PDF should be downloaded.,To be tested,Not Run,Medium,Functional,,
+My Trips,test_103,Ranveer,To check the confirmation email.,Registered user with at least one booking.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an email is sent after booking.,"1. Complete a booking.
+2. Check inbox.",Registered email,Confirmation email with booking details should be received.,To be tested,Not Run,Medium,Functional,,
+Website UI,test_104,Ranveer,To check the homepage load.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the homepage loads fully.,1. Open the EaseMyTrip URL.,https://www.easemytrip.com,Homepage should load without errors.,To be tested,Not Run,High,Functional,,
+Website UI,test_105,Ranveer,To check the navigation bar links.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that all navbar links open correct pages.,1. Click each navbar link.,N/A,Each link should open its section.,To be tested,Not Run,High,Functional,,
+Website UI,test_106,Ranveer,To check broken images.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that images load on the homepage.,"1. Open homepage.
+2. Scroll through the page.",N/A,No broken images should be visible.,To be tested,Not Run,Medium,UI,,
+Website UI,test_107,Ranveer,To check broken links.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that links do not return 404 errors.,1. Click links on the homepage.,N/A,Links should open valid pages.,To be tested,Not Run,Medium,Functional,,
+Website UI,test_108,Ranveer,To check the page title.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the browser tab shows the right title.,"1. Open homepage.
+2. Check the tab title.",N/A,Title should contain EaseMyTrip.,To be tested,Not Run,Low,UI,,
+Website UI,test_109,Ranveer,To check the favicon.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a favicon is shown.,"1. Open homepage.
+2. Check the tab icon.",N/A,Favicon should be visible.,To be tested,Not Run,Low,UI,,
+Website UI,test_110,Ranveer,To check the banner/slider.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that promotional banners rotate.,"1. Open homepage.
+2. Observe the banner.",N/A,Banners should rotate or be navigable.,To be tested,Not Run,Low,UI,,
+Website UI,test_111,Ranveer,To check the currency selector.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that currency can be changed.,"1. Click the currency dropdown.
+2. Select a currency.",USD,Prices should be shown in the selected currency.,To be tested,Not Run,Low,Functional,,
+Website UI,test_112,Ranveer,To check the customer support link.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Support/Contact page opens.,1. Click Customer Support.,N/A,Support page should be displayed.,To be tested,Not Run,Medium,Functional,,
+Website UI,test_113,Ranveer,To check footer links.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that footer links work.,"1. Scroll to the footer.
+2. Click About Us, Privacy Policy and Terms.",N/A,Each link should open the right page.,To be tested,Not Run,Low,Functional,,
+Website UI,test_114,Ranveer,To check the Back button behaviour.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that browser Back returns to the previous page.,"1. Search flights.
+2. Click browser Back.",N/A,Search page should be shown with details retained.,To be tested,Not Run,Medium,Functional,,
+Website UI,test_115,Ranveer,To check the page refresh on results.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that refreshing results keeps the search.,"1. Search flights.
+2. Refresh the page.",N/A,Results should reload for the same search.,To be tested,Not Run,Low,Functional,,
+Compatibility,test_116,Ranveer,To check mobile responsive layout.,Target device/browsers available.,Windows/Linux/Mac,Mobile,Chrome / Firefox / Edge,Verify that the site adapts to mobile screens.,"1. Open the site on a mobile.
+2. Check layout.",N/A,Layout should adjust without horizontal scrolling.,To be tested,Not Run,High,Compatibility,,
+Compatibility,test_117,Ranveer,To check tablet layout.,Target device/browsers available.,Windows/Linux/Mac,Tablet,Chrome / Firefox / Edge,Verify that the site displays well on a tablet.,1. Open the site on a tablet.,N/A,Layout should be properly aligned.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_118,Ranveer,To check cross-browser behaviour.,Target device/browsers available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,"Verify that the site works on Chrome, Firefox and Edge.","1. Open the site in each browser.
+2. Run a flight search.",N/A,Behaviour should be consistent in all browsers.,To be tested,Not Run,High,Compatibility,,
+Compatibility,test_119,Ranveer,To check the mobile flight search.,Target device/browsers available.,Windows/Linux/Mac,Mobile,Chrome / Firefox / Edge,Verify that flight search works on mobile.,"1. Open the mobile site.
+2. Search flights.",Pune to Delhi,Results should be displayed correctly.,To be tested,Not Run,High,Functional,,
+Performance,test_120,Ranveer,To check the homepage load time.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the homepage loads within an acceptable time.,"1. Open homepage.
+2. Measure load time.",N/A,Page should load within 5 seconds.,To be tested,Not Run,Medium,Performance,,
+Performance,test_121,Ranveer,To check results load time.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that search results load quickly.,"1. Search flights.
+2. Measure time.",N/A,Results should load within 10 seconds.,To be tested,Not Run,Medium,Performance,,
+Security,test_122,Ranveer,To check HTTPS usage.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site uses HTTPS.,"1. Open the site.
+2. Check the address bar.",N/A,URL should start with https and show a secure lock.,To be tested,Not Run,High,Security,,
+Security,test_123,Ranveer,To check SQL injection in a search field.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that special characters are handled safely.,1. Enter SQL text in the From field.,' OR 1=1 --,Input should be sanitised with no error or data exposure.,To be tested,Not Run,Medium,Security,,
+Security,test_124,Ranveer,To check XSS in an input field.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that scripts are not executed.,1. Enter a script tag in a text field.,<script>alert(1)</script>,Script should not execute.,To be tested,Not Run,Medium,Security,,
+Usability,test_125,Ranveer,To check keyboard navigation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Tab key moves through form fields.,"1. Open Flights.
+2. Press Tab repeatedly.",N/A,Focus should move logically across fields.,To be tested,Not Run,Low,Usability,,
+Usability,test_126,Ranveer,To check the error message clarity.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that error messages are clear.,1. Trigger a validation error.,N/A,Messages should be understandable.,To be tested,Not Run,Low,Usability,,
+Usability,test_127,Ranveer,To check the language selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that language can be changed if available.,"1. Open language menu.
+2. Select a language.",Hindi,Content should display in the selected language.,To be tested,Not Run,Low,Functional,,
+Profile,test_128,Ranveer,To check viewing profile details.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that profile shows the saved user details.,"1. Log in.
+2. Open My Profile.",N/A,"Name, email and mobile should be displayed correctly.",To be tested,Not Run,Medium,Functional,,
+Profile,test_129,Ranveer,To check editing the profile name.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the name can be updated.,"1. Open My Profile.
+2. Edit name.
+3. Save.",Name: Ranveer Ghorpade,Updated name should be saved and displayed.,To be tested,Not Run,Medium,Functional,,
+Profile,test_130,Ranveer,To check changing the password.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the password can be changed with the correct old password.,"1. Open Change Password.
+2. Enter old and new password.
+3. Save.",Old: Test@1234; New: New@5678,Password should be updated successfully.,To be tested,Not Run,High,Functional,,
+Profile,test_131,Ranveer,To check changing the password with a wrong old password.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a wrong old password is rejected.,"1. Open Change Password.
+2. Enter wrong old password.
+3. Save.",Old: wrong,Error message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Profile,test_132,Ranveer,To check password strength validation.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that weak passwords are rejected.,"1. Open Sign Up.
+2. Enter a weak password.",Password: 123,Password strength message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Profile,test_133,Ranveer,To check saved traveller list.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a traveller can be saved for future bookings.,"1. Open Saved Travellers.
+2. Add a traveller.
+3. Save.","Name, DOB, gender",Traveller should appear in the saved list.,To be tested,Not Run,Low,Functional,,
+Profile,test_134,Ranveer,To check deleting a saved traveller.,Registered user logged in.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a saved traveller can be removed.,"1. Open Saved Travellers.
+2. Delete a traveller.",N/A,Traveller should be removed from the list.,To be tested,Not Run,Low,Functional,,
+Login,test_135,Ranveer,To check account lock after repeated wrong attempts.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that multiple failed logins are restricted.,"1. Open Login.
+2. Enter wrong password 5 times.",Wrong password x5,Account/captcha restriction should be applied.,To be tested,Not Run,Medium,Security,,
+Login,test_136,Ranveer,To check the login session timeout.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an idle session expires.,"1. Log in.
+2. Stay idle for the timeout period.
+3. Refresh.",N/A,User should be asked to log in again.,To be tested,Not Run,Low,Security,,
+Login,test_137,Ranveer,To check the Remember Me option.,Website accessible; registered account available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that login persists when selected.,"1. Log in with Remember Me.
+2. Close and reopen the browser.",N/A,User should stay logged in.,To be tested,Not Run,Low,Functional,,
+Flights,test_138,Ranveer,To check the fare type options.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that multiple fare types (Regular/Student/Senior) are shown.,"1. Open Flights.
+2. View the fare type options.",N/A,Fare type options should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_139,Ranveer,To check the Student fare search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that student fare results are shown.,"1. Select Student fare.
+2. Search flights.",Student fare,Flights offering student fares should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_140,Ranveer,To check the Armed Forces fare.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that special fares can be selected.,"1. Select Armed Forces fare.
+2. Search flights.",Armed Forces,Applicable fares should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_141,Ranveer,To check the baggage information.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that baggage allowance is displayed.,"1. Search flights.
+2. Open Flight Details.",N/A,Cabin and check-in baggage details should be shown.,To be tested,Not Run,Medium,Functional,,
+Flights,test_142,Ranveer,To check seat selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that seats can be selected during booking.,"1. Open the booking page.
+2. Choose a seat.",1 seat,Selected seat should be highlighted and fare updated.,To be tested,Not Run,Medium,Functional,,
+Flights,test_143,Ranveer,To check meal selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a meal can be added.,"1. Open add-ons.
+2. Select a meal.",Veg meal,Meal should be added and total updated.,To be tested,Not Run,Low,Functional,,
+Flights,test_144,Ranveer,To check adding extra baggage.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that extra baggage can be added.,"1. Open add-ons.
+2. Choose extra baggage.",+5 kg,Total fare should include the extra baggage cost.,To be tested,Not Run,Low,Functional,,
+Flights,test_145,Ranveer,To check the refundable/non-refundable tag.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that refund status is shown on results.,"1. Search flights.
+2. View the result list.",N/A,Refundable or Non-refundable tag should be displayed.,To be tested,Not Run,Low,UI,,
+Flights,test_146,Ranveer,To check passenger name format.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that names accept only letters.,"1. Go to traveller details.
+2. Enter digits in the name.",Name: Ran123,Validation error should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_147,Ranveer,To check the passenger title/gender field.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that title selection is mandatory.,"1. Go to traveller details.
+2. Skip title.
+3. Continue.",No title,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Flights,test_148,Ranveer,To check the date of birth for infants.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that infant age rules are enforced.,"1. Go to traveller details.
+2. Enter infant DOB older than 2 years.",Infant DOB older than 2 years,Age validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_149,Ranveer,To check the email validation on booking.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid email is rejected.,"1. Go to contact details.
+2. Enter invalid email.",abc@,Invalid email message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_150,Ranveer,To check the Fare Rules link.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that fare rules can be viewed.,"1. Open the review page.
+2. Click Fare Rules.",N/A,Cancellation and change rules should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_151,Ranveer,To check the price change alert.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the user is informed if the fare changes.,"1. Open the review page.
+2. Wait for fare update.",N/A,Updated fare alert should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_152,Ranveer,To check the cheapest fare calendar.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that fares are shown on the calendar.,"1. Open date picker.
+2. View the fare calendar.",N/A,Fares should be displayed under dates.,To be tested,Not Run,Low,UI,,
+Flights,test_153,Ranveer,To check the flexible date search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that nearby dates can be searched.,"1. Search flights.
+2. Select +/- 3 days.",N/A,Fares for nearby dates should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_154,Ranveer,To check the multi-city results.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that multi-city search shows results for each leg.,"1. Search multi-city.
+2. View results.",Pune-Delhi; Delhi-Goa,Results for each leg should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_155,Ranveer,To check flights with layovers.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that 1 stop flights show layover details.,"1. Search flights.
+2. Select 1 Stop filter.",1 Stop,Layover location and duration should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_156,Ranveer,To check the airline logo display.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that airline logos are shown.,1. Search flights.,N/A,Logos should be displayed next to each flight.,To be tested,Not Run,Low,UI,,
+Flights,test_157,Ranveer,To check flight duration display.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that duration is shown correctly.,"1. Search flights.
+2. Compare duration with times.",N/A,Duration should match departure and arrival times.,To be tested,Not Run,Low,Functional,,
+Flights,test_158,Ranveer,To check the flight cancellation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a flight booking can be cancelled.,"1. Open My Trips.
+2. Select a flight.
+3. Click Cancel.",Test booking,Cancellation should be confirmed with refund amount.,To be tested,Not Run,High,Functional,,
+Flights,test_159,Ranveer,To check rescheduling a flight.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a booking can be rescheduled.,"1. Open My Trips.
+2. Click Reschedule.
+3. Select a new date.",New date,Reschedule options and charges should be displayed.,To be tested,Not Run,Medium,Functional,,
+Flights,test_160,Ranveer,To check web check-in.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the web check-in link works.,"1. Open Web Check-in.
+2. Select an airline.",IndiGo,Airline check-in page should open.,To be tested,Not Run,Low,Functional,,
+Flights,test_161,Ranveer,To check the double booking prevention.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that rapidly clicking Book does not create duplicates.,1. Click Book Now twice quickly.,N/A,Only one booking flow should start.,To be tested,Not Run,Medium,Negative,,
+Hotels,test_162,Ranveer,To check the hotel cancellation policy.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the policy is displayed.,"1. Open a hotel.
+2. View Cancellation Policy.",N/A,Free cancellation or charges should be displayed.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_163,Ranveer,To check the pay at hotel option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that pay-at-hotel is available where offered.,"1. Select a room.
+2. Choose Pay at Hotel.",N/A,Booking should proceed without immediate payment.,To be tested,Not Run,Low,Functional,,
+Hotels,test_164,Ranveer,To check the guest reviews.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that reviews and ratings are shown.,"1. Open a hotel.
+2. Open Reviews.",N/A,Rating and reviews should be displayed.,To be tested,Not Run,Low,Functional,,
+Hotels,test_165,Ranveer,To check the hotel name search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a hotel can be searched by name.,"1. Open Hotels.
+2. Type a hotel name.",Taj,Matching hotels should be suggested.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_166,Ranveer,To check the guest name validation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that guest names are mandatory.,"1. Open booking page.
+2. Leave guest name empty.
+3. Continue.",Empty name,Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Hotels,test_167,Ranveer,To check the hotel total price.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the price includes taxes.,"1. Open the review page.
+2. Check the price summary.",N/A,Total should include room price and taxes.,To be tested,Not Run,High,Functional,,
+Hotels,test_168,Ranveer,To check the child age input.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that child age is requested.,1. Add a child in guests.,Child age: 5,Child age should be saved.,To be tested,Not Run,Low,Functional,,
+Hotels,test_169,Ranveer,To check the hotel booking cancellation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a hotel booking can be cancelled.,"1. Open My Trips.
+2. Select a hotel booking.
+3. Cancel.",Test booking,Cancellation should be confirmed.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_170,Ranveer,To check the nearby landmarks sort.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that sorting by distance works.,"1. Search hotels.
+2. Sort by distance.",N/A,Nearest hotels should be listed first.,To be tested,Not Run,Low,Functional,,
+Hotels,test_171,Ranveer,To check the property type filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Hotel/Resort/Villa filter works.,"1. Search hotels.
+2. Select Resort.",Resort,Only resorts should be displayed.,To be tested,Not Run,Low,Functional,,
+Trains,test_172,Ranveer,To check the train availability.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that seat availability is shown.,"1. Search trains.
+2. View class availability.",N/A,Availability status should be displayed.,To be tested,Not Run,Medium,Functional,,
+Trains,test_173,Ranveer,To check the date selection for trains.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that past dates are disabled.,1. Open the date picker in Trains.,Past date,Past dates should be disabled.,To be tested,Not Run,Medium,Negative,,
+Trains,test_174,Ranveer,To check the train schedule.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the schedule page loads.,"1. Open Train Schedule.
+2. Enter train number.",12345,Schedule should be displayed.,To be tested,Not Run,Low,Functional,,
+Trains,test_175,Ranveer,To check the redirection for booking.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that booking proceeds to the next step.,"1. Search trains.
+2. Click Book Now.",N/A,Booking page should open.,To be tested,Not Run,Medium,Functional,,
+Buses,test_176,Ranveer,To check the bus route suggestion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that city suggestions appear in bus search.,"1. Open Buses.
+2. Type ""Mum"".",Mum,Mumbai should be suggested.,To be tested,Not Run,Low,Functional,,
+Buses,test_177,Ranveer,To check the same source and destination in Buses.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that identical cities are rejected.,"1. Open Buses.
+2. Enter same city.",Pune; Pune,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Buses,test_178,Ranveer,To check the bus fare display.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the fare is shown for selected seats.,1. Select 2 seats.,2 seats,Total fare should be updated.,To be tested,Not Run,Medium,Functional,,
+Buses,test_179,Ranveer,To check the bus booking cancellation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a bus booking can be cancelled.,"1. Open My Trips.
+2. Cancel a bus ticket.",Test booking,Cancellation should be confirmed with refund details.,To be tested,Not Run,Medium,Functional,,
+Cabs,test_180,Ranveer,To check the one-way and round trip cab options.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that trip type can be selected.,"1. Open Cabs.
+2. Select Round Trip.",N/A,Return date field should be shown.,To be tested,Not Run,Low,Functional,,
+Cabs,test_181,Ranveer,To check the cab fare display.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the fare is shown.,1. Search cabs.,N/A,Fare and vehicle type should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_182,Ranveer,To check the EMI option.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that EMI options are shown for eligible cards.,"1. Open payment page.
+2. Choose EMI.",N/A,EMI plans should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_183,Ranveer,To check the wallet payment.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that wallet payment option works.,"1. Open payment page.
+2. Choose Wallet.",N/A,Wallet options should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_184,Ranveer,To check the payment retry.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the user can retry after a failure.,"1. Fail a payment.
+2. Click Retry.",N/A,Payment page should open again.,To be tested,Not Run,Medium,Functional,,
+Payment,test_185,Ranveer,To check that the amount is not charged twice.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that no duplicate charge occurs.,1. Pay and refresh on the success page.,N/A,Only one booking and charge should be created.,To be tested,Not Run,High,Functional,,
+Payment,test_186,Ranveer,To check the amount on the payment page.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the amount matches the fare summary.,1. Compare the review and payment page totals.,N/A,Both amounts should match.,To be tested,Not Run,High,Functional,,
+Payment,test_187,Ranveer,To check the saved card option.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that saved cards are listed.,1. Open payment page as a logged-in user.,N/A,Saved cards should be displayed if available.,To be tested,Not Run,Low,Functional,,
+Payment,test_188,Ranveer,To check the card holder name validation.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the name field is validated.,"1. Choose Card.
+2. Leave name empty.",N/A,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Payment,test_189,Ranveer,To check the OTP step for cards.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that OTP/3D Secure appears.,1. Pay by card.,Test card,OTP page should be shown.,To be tested,Not Run,Medium,Security,,
+Website UI,test_190,Ranveer,To check the 404 page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an invalid URL shows a proper error page.,1. Open an invalid URL.,/invalid-page,A 404 page or redirect should be displayed.,To be tested,Not Run,Low,Negative,,
+Website UI,test_191,Ranveer,To check the scroll to top.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the page scrolls and returns to the top.,"1. Scroll down.
+2. Use scroll to top.",N/A,Page should return to the top.,To be tested,Not Run,Low,UI,,
+Website UI,test_192,Ranveer,To check the cookie/privacy banner.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the banner is displayed and dismissable.,1. Open the site in a fresh session.,N/A,Banner should be displayed and close properly.,To be tested,Not Run,Low,UI,,
+Website UI,test_193,Ranveer,To check the newsletter subscription.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an email can be subscribed.,"1. Scroll to the footer.
+2. Enter email.
+3. Subscribe.",Valid email,Success message should be displayed.,To be tested,Not Run,Low,Functional,,
+Website UI,test_194,Ranveer,To check the newsletter with an invalid email.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that invalid emails are rejected.,"1. Enter invalid email.
+2. Subscribe.",abc,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Website UI,test_195,Ranveer,To check the app download links.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that app store links open.,1. Click Play Store/App Store.,N/A,The store page should open.,To be tested,Not Run,Low,Functional,,
+Website UI,test_196,Ranveer,To check the social media links.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that social icons open the right pages.,1. Click each social icon.,N/A,Correct pages should open in a new tab.,To be tested,Not Run,Low,Functional,,
+Website UI,test_197,Ranveer,To check the Contact Us form.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the contact form can be submitted.,"1. Open Contact Us.
+2. Fill the form.
+3. Submit.",Valid details,Confirmation message should be displayed.,To be tested,Not Run,Low,Functional,,
+Website UI,test_198,Ranveer,To check the FAQ page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that FAQs expand and collapse.,"1. Open FAQs.
+2. Click a question.",N/A,Answer should expand and collapse.,To be tested,Not Run,Low,UI,,
+Website UI,test_199,Ranveer,To check multiple tabs.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site works in multiple tabs.,"1. Open the site in two tabs.
+2. Search in both.",N/A,Both tabs should work independently.,To be tested,Not Run,Low,Functional,,
+Website UI,test_200,Ranveer,To check the page zoom.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that layout holds at 150% zoom.,1. Zoom the browser to 150%.,N/A,Layout should remain usable.,To be tested,Not Run,Low,UI,,
+Website UI,test_201,Ranveer,To check the text readability.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that fonts and contrast are readable.,"1. Open homepage.
+2. Review text.",N/A,Text should be readable.,To be tested,Not Run,Low,Usability,,
+Website UI,test_202,Ranveer,To check the dark mode/screen resolution.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the layout works at 1366x768.,1. Set resolution to 1366x768.,1366x768,Layout should display properly.,To be tested,Not Run,Low,Compatibility,,
+Compatibility,test_203,Ranveer,To check Safari browser.,Target device/browsers available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site works on Safari.,"1. Open the site in Safari.
+2. Search flights.",N/A,Site should work as expected.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_204,Ranveer,To check the Android browser.,Target device/browsers available.,Windows/Linux/Mac,Mobile (Android),Chrome / Firefox / Edge,Verify that the site works on Android Chrome.,"1. Open the site on Android.
+2. Search flights.",N/A,Site should work as expected.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_205,Ranveer,To check the iOS browser.,Target device/browsers available.,Windows/Linux/Mac,Mobile (iOS),Chrome / Firefox / Edge,Verify that the site works on iPhone Safari.,"1. Open the site on iPhone.
+2. Search flights.",N/A,Site should work as expected.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_206,Ranveer,To check the screen rotation.,Target device/browsers available.,Windows/Linux/Mac,Mobile,Chrome / Firefox / Edge,Verify that orientation change keeps the layout.,1. Rotate the mobile device.,N/A,Layout should adapt properly.,To be tested,Not Run,Low,Compatibility,,
+Performance,test_207,Ranveer,To check the slow network behaviour.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site works on a slow connection.,"1. Throttle to 3G.
+2. Search flights.",3G,Page should load with loading indicators.,To be tested,Not Run,Low,Performance,,
+Performance,test_208,Ranveer,To check the loading indicator.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a loader is shown during search.,1. Search flights.,N/A,Loader should appear until results load.,To be tested,Not Run,Low,Usability,,
+Performance,test_209,Ranveer,To check the offline behaviour.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an error is shown without internet.,"1. Disconnect the internet.
+2. Search flights.",N/A,Network error message should be displayed.,To be tested,Not Run,Low,Negative,,
+Security,test_210,Ranveer,To check password not shown in the URL.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that credentials are not exposed in the URL.,"1. Log in.
+2. Check the URL.",N/A,No credentials should be visible in the URL.,To be tested,Not Run,Medium,Security,,
+Security,test_211,Ranveer,To check the cookie flags.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that session cookies are secure.,"1. Log in.
+2. Inspect cookies.",N/A,Secure and HttpOnly flags should be set.,To be tested,Not Run,Low,Security,,
+Security,test_212,Ranveer,To check the access to booking by URL.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that another user's booking is not accessible.,1. Change the booking ID in the URL.,Other booking ID,Access should be denied.,To be tested,Not Run,Medium,Security,,
+Flights,test_213,Ranveer,To check the recent searches list.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that previous searches are suggested.,"1. Search flights.
+2. Return to the homepage.
+3. Click the From field.",N/A,Recent searches should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_214,Ranveer,To check the leap year date selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that 29 February is selectable in a leap year.,"1. Open the date picker.
+2. Navigate to Feb of a leap year.",29-Feb-2028,29 February should be selectable.,To be tested,Not Run,Low,Functional,,
+Flights,test_215,Ranveer,To check the month-end date selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that month-end dates work correctly.,"1. Open the date picker.
+2. Select 31 of a month.",31-Dec-2026,The date should be selected correctly.,To be tested,Not Run,Low,Functional,,
+Flights,test_216,Ranveer,To check the same-day flight search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that today's flights can be searched.,"1. Open Flights.
+2. Select today's date.
+3. Search.",Today's date,Flights departing later today should be displayed.,To be tested,Not Run,Medium,Functional,,
+Flights,test_217,Ranveer,To check the passenger name maximum length.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that very long names are validated.,"1. Go to traveller details.
+2. Enter 60+ characters in the name.",60+ character name,Length validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Flights,test_218,Ranveer,To check special characters in the passenger name.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that special characters are rejected.,"1. Go to traveller details.
+2. Enter special characters in the name.",Name: Ran@#$,Validation error should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_219,Ranveer,To check the mobile number validation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the mobile number must have 10 digits.,"1. Go to contact details.
+2. Enter 9 digits.",Mobile: 987654321,Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Flights,test_220,Ranveer,To check the mobile number with letters.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that letters are not accepted.,"1. Go to contact details.
+2. Type letters in mobile.",Mobile: abcdefghij,Field should reject letters.,To be tested,Not Run,Low,Negative,,
+Flights,test_221,Ranveer,To check the GST details option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that GST details can be added for business travel.,"1. Open the review page.
+2. Select Use GST.
+3. Enter GST details.",Valid GST number,GST details should be accepted and saved.,To be tested,Not Run,Low,Functional,,
+Flights,test_222,Ranveer,To check the invalid GST number.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an invalid GST number is rejected.,"1. Select Use GST.
+2. Enter an invalid number.",GST: 12345,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Flights,test_223,Ranveer,To check the travel insurance add-on.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that insurance can be added or removed.,"1. Open the review page.
+2. Tick Travel Insurance.",N/A,Total should include the insurance amount.,To be tested,Not Run,Low,Functional,,
+Flights,test_224,Ranveer,To check removing the insurance add-on.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that untick removes the insurance charge.,"1. Tick insurance.
+2. Untick insurance.",N/A,Total should return to the original amount.,To be tested,Not Run,Low,Functional,,
+Flights,test_225,Ranveer,To check the booking summary before payment.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the summary shows correct passenger and route details.,"1. Complete traveller details.
+2. View the summary.",N/A,Details should match the entered data.,To be tested,Not Run,High,Functional,,
+Flights,test_226,Ranveer,To check the e-ticket content.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the e-ticket has all required details.,1. Open a confirmed ticket.,N/A,"Passenger, route, date, PNR and fare should be shown.",To be tested,Not Run,High,Functional,,
+Flights,test_227,Ranveer,To check the name correction option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that name correction can be requested.,"1. Open My Trips.
+2. Click Name Correction.",N/A,Correction request form should open.,To be tested,Not Run,Low,Functional,,
+Flights,test_228,Ranveer,To check the refund status.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the refund status is visible after cancellation.,"1. Cancel a booking.
+2. Open My Trips.",N/A,Refund status should be displayed.,To be tested,Not Run,Medium,Functional,,
+Flights,test_229,Ranveer,To check the refund to original payment mode.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that refund goes back to the original source.,"1. Cancel a booking.
+2. View refund details.",N/A,Refund mode should match the payment mode.,To be tested,Not Run,Medium,Functional,,
+Flights,test_230,Ranveer,To check partial cancellation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that one passenger can be cancelled.,"1. Open a multi-passenger booking.
+2. Select one passenger.
+3. Cancel.",1 of 2 passengers,Only the selected passenger should be cancelled.,To be tested,Not Run,Medium,Functional,,
+Flights,test_231,Ranveer,To check the invoice download.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the invoice can be downloaded.,"1. Open My Trips.
+2. Click Download Invoice.",N/A,Invoice should be downloaded.,To be tested,Not Run,Low,Functional,,
+Flights,test_232,Ranveer,To check sorting by shortest duration.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that duration sort works.,"1. Search flights.
+2. Sort by Duration.",N/A,Shortest flights should be listed first.,To be tested,Not Run,Low,Functional,,
+Flights,test_233,Ranveer,To check sorting by departure time.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that departure time sort works.,"1. Search flights.
+2. Sort by Departure.",N/A,Flights should be ordered by departure time.,To be tested,Not Run,Low,Functional,,
+Flights,test_234,Ranveer,To check the arrival time filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the arrival time filter works.,"1. Search flights.
+2. Select Evening arrival.",Evening,Only evening arrivals should be displayed.,To be tested,Not Run,Low,Functional,,
+Flights,test_235,Ranveer,To check clearing all filters.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Clear All resets filters.,"1. Apply filters.
+2. Click Clear All.",N/A,All flights should be displayed again.,To be tested,Not Run,Low,Functional,,
+Flights,test_236,Ranveer,To check the results count.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the number of results matches the list.,"1. Search flights.
+2. Compare count with list.",N/A,Displayed count should match listed flights.,To be tested,Not Run,Low,Functional,,
+Flights,test_237,Ranveer,To check the price consistency.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the fare is same on results and review pages.,"1. Note the result fare.
+2. Open the review page.",N/A,Fares should match.,To be tested,Not Run,High,Functional,,
+Flights,test_238,Ranveer,To check the Indian Rupee symbol.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that prices use the rupee symbol and format.,"1. Search flights.
+2. Check prices.",N/A,Prices should show the ₹ symbol with proper commas.,To be tested,Not Run,Low,UI,,
+Flights,test_239,Ranveer,To check the airport code display.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that airport codes are shown with cities.,1. Type a city in From.,Pune,Code (PNQ) should be displayed with the city.,To be tested,Not Run,Low,UI,,
+Flights,test_240,Ranveer,To check sharing the flight itinerary.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an itinerary can be shared.,"1. Open a result.
+2. Click Share.",N/A,Share options should open.,To be tested,Not Run,Low,Functional,,
+Flights,test_241,Ranveer,To check the flight status check.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a flight's live status can be viewed.,"1. Open Flight Status.
+2. Enter flight number.",Valid flight number,Status should be displayed.,To be tested,Not Run,Low,Functional,,
+Hotels,test_242,Ranveer,To check the free cancellation filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the filter shows only refundable hotels.,"1. Search hotels.
+2. Select Free Cancellation.",N/A,Only free-cancellation hotels should be displayed.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_243,Ranveer,To check the breakfast included filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the filter shows hotels with breakfast.,"1. Search hotels.
+2. Select Breakfast Included.",N/A,Only hotels with breakfast should be displayed.,To be tested,Not Run,Low,Functional,,
+Hotels,test_244,Ranveer,To check the locality filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that locality filtering works.,"1. Search hotels.
+2. Select a locality.",Locality: Baner,Only hotels in that locality should be displayed.,To be tested,Not Run,Low,Functional,,
+Hotels,test_245,Ranveer,To check the same-day check-in.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that today's check-in can be selected.,1. Select today as check-in.,N/A,Today should be selectable.,To be tested,Not Run,Low,Functional,,
+Hotels,test_246,Ranveer,To check a long stay.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a long stay is handled.,1. Select 30+ nights.,31 nights,System should accept or show a limit message.,To be tested,Not Run,Low,Functional,,
+Hotels,test_247,Ranveer,To check the maximum guests per room.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the room guest limit is enforced.,"1. Open Rooms & Guests.
+2. Add many adults to one room.",Adults above limit,Maximum limit should be enforced.,To be tested,Not Run,Low,Negative,,
+Hotels,test_248,Ranveer,To check adding another room.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that multiple rooms can be added.,"1. Open Rooms & Guests.
+2. Click Add Room.",2 rooms,Two room sections should appear.,To be tested,Not Run,Low,Functional,,
+Hotels,test_249,Ranveer,To check the hotel list pagination/scroll.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that more results load on scrolling.,"1. Search hotels.
+2. Scroll to the bottom.",N/A,More hotels should load.,To be tested,Not Run,Low,Functional,,
+Hotels,test_250,Ranveer,To check the hotel price per night.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the per-night and total prices are consistent.,"1. Search hotels.
+2. Compare price on list and review page.",N/A,Prices should be consistent.,To be tested,Not Run,High,Functional,,
+Hotels,test_251,Ranveer,To check the check-in and check-out time info.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that timings are shown.,"1. Open a hotel.
+2. View Policies.",N/A,Check-in and check-out times should be displayed.,To be tested,Not Run,Low,UI,,
+Hotels,test_252,Ranveer,To check sorting by guest rating.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that rating sort works.,"1. Search hotels.
+2. Sort by Rating.",N/A,Top-rated hotels should be listed first.,To be tested,Not Run,Low,Functional,,
+Hotels,test_253,Ranveer,To check the hotel voucher.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the booking voucher can be downloaded.,"1. Open My Trips.
+2. Download hotel voucher.",N/A,Voucher should be downloaded.,To be tested,Not Run,Medium,Functional,,
+Hotels,test_254,Ranveer,To check the hotel sold-out message.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that unavailable rooms are marked.,1. Search a busy date.,Festival date,Sold out message should be displayed where applicable.,To be tested,Not Run,Low,Negative,,
+Payment,test_255,Ranveer,To check the Back button on the payment page.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Back does not create a duplicate booking.,"1. Open payment page.
+2. Click browser Back.",N/A,User should return safely without duplicate booking.,To be tested,Not Run,Medium,Negative,,
+Payment,test_256,Ranveer,To check refreshing the payment page.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that refresh does not break the payment.,"1. Open payment page.
+2. Refresh.",N/A,Payment page should reload with the booking intact.,To be tested,Not Run,Medium,Negative,,
+Payment,test_257,Ranveer,To check the failed payment message.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a failure shows a clear message.,1. Use a failing test card.,Test failing card,Clear failure message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Payment,test_258,Ranveer,To check the card number formatting.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that card digits are grouped.,"1. Choose Card.
+2. Type 16 digits.",16 digits,Digits should be grouped in sets of four.,To be tested,Not Run,Low,UI,,
+Payment,test_259,Ranveer,To check the maximum card length.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that extra digits are not accepted.,"1. Choose Card.
+2. Type 20 digits.",20 digits,Only valid length should be accepted.,To be tested,Not Run,Low,Negative,,
+Payment,test_260,Ranveer,To check the UPI QR option.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a UPI QR code or intent is offered.,1. Choose UPI.,N/A,QR code or UPI app options should be displayed.,To be tested,Not Run,Low,Functional,,
+Payment,test_261,Ranveer,To check the pending payment status.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that pending payments are marked.,1. Complete a delayed payment.,N/A,Pending status should be shown with guidance.,To be tested,Not Run,Medium,Functional,,
+Payment,test_262,Ranveer,To check the payment confirmation email/SMS.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a confirmation is sent after payment.,1. Complete a test payment.,N/A,Email and SMS should be received.,To be tested,Not Run,Medium,Functional,,
+Payment,test_263,Ranveer,To check the convenience fee display.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that any fee is shown before payment.,"1. Open payment page.
+2. Choose each mode.",N/A,"Fee, if any, should be displayed before paying.",To be tested,Not Run,Medium,Functional,,
+Payment,test_264,Ranveer,To check the security badges.,Booking in progress; test payment method available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that trust indicators are visible.,1. Open payment page.,N/A,Secure payment indicators should be displayed.,To be tested,Not Run,Low,UI,,
+Offers,test_265,Ranveer,To check an expired coupon.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an expired coupon is rejected.,"1. Enter an expired code.
+2. Apply.",Expired code,Expiry message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Offers,test_266,Ranveer,To check the coupon minimum amount rule.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that minimum amount conditions are enforced.,1. Apply a coupon below the minimum amount.,N/A,Message about the minimum amount should be displayed.,To be tested,Not Run,Low,Negative,,
+Offers,test_267,Ranveer,To check removing an applied coupon.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the coupon can be removed.,"1. Apply a coupon.
+2. Remove it.",N/A,Original total should be restored.,To be tested,Not Run,Low,Functional,,
+Offers,test_268,Ranveer,To check the coupon case sensitivity.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that coupon codes behave consistently.,1. Enter a coupon in lowercase.,Lowercase code,Code should be accepted or rejected consistently.,To be tested,Not Run,Low,Functional,,
+Offers,test_269,Ranveer,To check the cashback/wallet balance.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that wallet balance is displayed.,"1. Log in.
+2. Open Wallet.",N/A,Wallet balance should be displayed.,To be tested,Not Run,Low,Functional,,
+Offers,test_270,Ranveer,To check the refer and earn page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the referral page opens.,1. Open Refer & Earn.,N/A,Referral details and link should be displayed.,To be tested,Not Run,Low,Functional,,
+Offers,test_271,Ranveer,To check the terms and conditions of an offer.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that offer T&C opens.,"1. Open Offers.
+2. Click T&C.",N/A,Terms should be displayed.,To be tested,Not Run,Low,Functional,,
+Trains,test_272,Ranveer,To check the train live running status.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that live status is displayed.,"1. Open Live Status.
+2. Enter train number.",Valid train number,Live status should be displayed.,To be tested,Not Run,Low,Functional,,
+Trains,test_273,Ranveer,To check the Tatkal option.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that Tatkal quota can be selected.,"1. Search trains.
+2. Select Tatkal.",Tatkal,Tatkal availability should be displayed.,To be tested,Not Run,Low,Functional,,
+Trains,test_274,Ranveer,To check the train sorting.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that trains can be sorted by departure.,"1. Search trains.
+2. Sort by Departure.",N/A,Trains should be ordered by departure.,To be tested,Not Run,Low,Functional,,
+Trains,test_275,Ranveer,To check the train passenger details.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that passenger details are validated.,"1. Proceed to the passenger page.
+2. Leave name empty.",Empty name,Validation message should be displayed.,To be tested,Not Run,Medium,Negative,,
+Trains,test_276,Ranveer,To check the train station auto-suggestion.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that stations are suggested.,"1. Open Trains.
+2. Type ""Pun"".",Pun,Pune should appear in suggestions.,To be tested,Not Run,Low,Functional,,
+Buses,test_277,Ranveer,To check the bus operator filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that operator filter works.,"1. Search buses.
+2. Select an operator.",N/A,Only selected operator buses should be displayed.,To be tested,Not Run,Low,Functional,,
+Buses,test_278,Ranveer,To check the bus departure time filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the time filter works.,"1. Search buses.
+2. Select Night departure.",N/A,Only night buses should be displayed.,To be tested,Not Run,Low,Functional,,
+Buses,test_279,Ranveer,To check the sleeper/seater filter.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that bus seat type filter works.,"1. Search buses.
+2. Select Sleeper.",Sleeper,Only sleeper buses should be displayed.,To be tested,Not Run,Low,Functional,,
+Buses,test_280,Ranveer,To check the booked seat selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that booked seats cannot be selected.,"1. Open seat layout.
+2. Click a booked seat.",N/A,Booked seat should not be selectable.,To be tested,Not Run,High,Negative,,
+Buses,test_281,Ranveer,To check the maximum seats per booking.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the seat limit is enforced.,1. Select more than 6 seats.,7 seats,Maximum limit message should be displayed.,To be tested,Not Run,Low,Negative,,
+Buses,test_282,Ranveer,To check the bus passenger details.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that age and gender are required.,"1. Select a seat.
+2. Continue without age.",N/A,Validation message should be displayed.,To be tested,Not Run,Low,Negative,,
+Buses,test_283,Ranveer,To check the bus ticket download.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the ticket can be downloaded.,"1. Open My Trips.
+2. Download bus ticket.",N/A,Ticket should be downloaded.,To be tested,Not Run,Low,Functional,,
+Cabs,test_284,Ranveer,To check the cab type selection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that vehicle types can be chosen.,"1. Search cabs.
+2. Select Sedan.",Sedan,Selected type should be highlighted.,To be tested,Not Run,Low,Functional,,
+Cabs,test_285,Ranveer,To check the cab booking cancellation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that a cab can be cancelled.,"1. Open My Trips.
+2. Cancel a cab booking.",Test booking,Cancellation should be confirmed.,To be tested,Not Run,Low,Functional,,
+Holidays,test_286,Ranveer,To check the holiday package filters.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that budget and duration filters work.,"1. Open Holidays.
+2. Apply filters.",5 days,Matching packages should be displayed.,To be tested,Not Run,Low,Functional,,
+Holidays,test_287,Ranveer,To check the package inquiry form.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that an inquiry can be submitted.,"1. Open a package.
+2. Fill the inquiry form.
+3. Submit.",Valid details,Confirmation should be displayed.,To be tested,Not Run,Low,Functional,,
+Holidays,test_288,Ranveer,To check the package itinerary.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the day-wise itinerary is displayed.,1. Open a package.,N/A,Itinerary should be displayed.,To be tested,Not Run,Low,Functional,,
+Accessibility,test_289,Ranveer,To check the image alt text.,Assistive tools available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that images have alternate text.,1. Inspect homepage images.,N/A,Alt text should be present for key images.,To be tested,Not Run,Low,Accessibility,,
+Accessibility,test_290,Ranveer,To check the screen reader labels.,Assistive tools available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that form fields have labels.,1. Use a screen reader on the search form.,N/A,Fields should be announced with labels.,To be tested,Not Run,Low,Accessibility,,
+Accessibility,test_291,Ranveer,To check the focus indicator.,Assistive tools available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that focused elements are visible.,1. Press Tab on the homepage.,N/A,Focus outline should be visible.,To be tested,Not Run,Low,Accessibility,,
+Accessibility,test_292,Ranveer,To check the colour contrast.,Assistive tools available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that text has sufficient contrast.,1. Check text against the background.,N/A,Contrast should be readable.,To be tested,Not Run,Low,Accessibility,,
+Website UI,test_293,Ranveer,To check the Enter key on search.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that pressing Enter submits the search.,"1. Fill the search form.
+2. Press Enter.",N/A,Search should be submitted.,To be tested,Not Run,Low,Usability,,
+Website UI,test_294,Ranveer,To check the copy and paste in fields.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that paste works in input fields.,1. Paste text into the email field.,N/A,Pasted text should be accepted.,To be tested,Not Run,Low,Usability,,
+Website UI,test_295,Ranveer,To check the browser autofill.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that autofill works for contact details.,1. Use browser autofill on the contact form.,N/A,Fields should be filled correctly.,To be tested,Not Run,Low,Usability,,
+Website UI,test_296,Ranveer,To check the homepage search tabs.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that switching tabs keeps the page state.,"1. Switch between Flights, Hotels and Trains.",N/A,Each tab should display its own form.,To be tested,Not Run,Medium,Functional,,
+Website UI,test_297,Ranveer,To check the tooltips.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that tooltips appear on hover.,1. Hover over info icons.,N/A,Tooltips should be displayed.,To be tested,Not Run,Low,UI,,
+Website UI,test_298,Ranveer,To check the print layout of a ticket.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the ticket prints correctly.,"1. Open a ticket.
+2. Use print preview.",N/A,Ticket should fit the page.,To be tested,Not Run,Low,UI,,
+Website UI,test_299,Ranveer,To check the Terms and Conditions page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the page opens and is readable.,1. Click Terms and Conditions.,N/A,Page should be displayed.,To be tested,Not Run,Low,Functional,,
+Website UI,test_300,Ranveer,To check the Privacy Policy page.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the page opens and is readable.,1. Click Privacy Policy.,N/A,Page should be displayed.,To be tested,Not Run,Low,Functional,,
+Website UI,test_301,Ranveer,To check the Contact Us form validation.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that empty submission is blocked.,"1. Open Contact Us.
+2. Submit empty form.",N/A,Validation messages should be displayed.,To be tested,Not Run,Low,Negative,,
+Website UI,test_302,Ranveer,To check the Help/Chat widget.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the chat or help widget opens.,1. Click Help/Chat.,N/A,Chat widget should open.,To be tested,Not Run,Low,Functional,,
+Compatibility,test_303,Ranveer,To check the Edge browser.,Target device/browsers available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site works on Edge.,"1. Open the site in Edge.
+2. Search flights.",N/A,Site should work as expected.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_304,Ranveer,To check the Firefox browser.,Target device/browsers available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that the site works on Firefox.,"1. Open the site in Firefox.
+2. Search flights.",N/A,Site should work as expected.,To be tested,Not Run,Medium,Compatibility,,
+Compatibility,test_305,Ranveer,To check the larger screen resolution.,Target device/browsers available.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that layout works at 1920x1080.,1. Set resolution to 1920x1080.,1920x1080,Layout should display properly.,To be tested,Not Run,Low,Compatibility,,
+Performance,test_306,Ranveer,To check the image load time.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that images load without long delay.,"1. Open homepage.
+2. Observe images.",N/A,Images should load promptly.,To be tested,Not Run,Low,Performance,,
+Performance,test_307,Ranveer,To check multiple searches in a row.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that repeated searches stay responsive.,1. Run 5 searches in a row.,N/A,Results should load each time without errors.,To be tested,Not Run,Low,Performance,,
+Security,test_308,Ranveer,To check the HTTP to HTTPS redirect.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that HTTP redirects to HTTPS.,1. Open the http:// URL.,http://www.easemytrip.com,User should be redirected to HTTPS.,To be tested,Not Run,Medium,Security,,
+Security,test_309,Ranveer,To check the captcha/bot protection.,Stable internet connection; website accessible.,Windows/Linux/Mac,Laptop/Desktop,Chrome / Firefox / Edge,Verify that bot protection appears when needed.,1. Submit forms repeatedly.,N/A,Captcha or restriction should be applied.,To be tested,Not Run,Low,Security,,

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EaseMyTrip Comprehensive Test Suite" verbose="2" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="com.easemytrip.listeners.TestListener" />
+    </listeners>
+
+    <parameter name="browser" value="chrome" />
+
+    <!-- 1. Framework Smoke Verification -->
+    <test name="Framework Smoke Verification" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.FrameworkSmokeTest" />
+        </classes>
+    </test>
+
+    <!-- 2. Flight Module Tests (test_002 - test_008, test_028 - test_030, test_033, test_036, test_138 - test_140) -->
+    <test name="Flight Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.flights.FlightSearchTest" />
+        </classes>
+    </test>
+
+    <!-- 3. Hotel Module Tests (test_009, test_010, test_057 - test_061) -->
+    <test name="Hotel Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.hotels.HotelSearchTest" />
+        </classes>
+    </test>
+
+    <!-- 4. Login Module Tests (test_001, test_013 - test_016, test_020) -->
+    <test name="Login Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.login.LoginTest" />
+        </classes>
+    </test>
+
+    <!-- 5. Train Module Tests (test_071 - test_073, test_076) -->
+    <test name="Train Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.trains.TrainSearchTest" />
+        </classes>
+    </test>
+
+    <!-- 6. Bus Module Tests (test_077, test_078, test_177) -->
+    <test name="Bus Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.buses.BusSearchTest" />
+        </classes>
+    </test>
+
+    <!-- 7. Cab Module Tests (test_082, test_083, test_180) -->
+    <test name="Cab Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.cabs.CabSearchTest" />
+        </classes>
+    </test>
+
+    <!-- 8. Holiday Module Tests (test_084, test_085) -->
+    <test name="Holiday Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.holidays.HolidaySearchTest" />
+        </classes>
+    </test>
+
+    <!-- 9. Offers Module Tests (test_095 - test_098, test_265) -->
+    <test name="Offers Module Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.offers.OffersTest" />
+        </classes>
+    </test>
+
+    <!-- 10. Payment Validation Tests (test_087 - test_090) -->
+    <test name="Payment Validation Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.payment.PaymentValidationTest" />
+        </classes>
+    </test>
+
+    <!-- 11. Website UI & Layout Tests (test_011, test_012, test_104, test_105, test_108, test_111, test_113, test_191) -->
+    <test name="Website UI Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.websiteui.WebsiteUITest" />
+        </classes>
+    </test>
+
+    <!-- 12. Security Verification Tests (test_122, test_123, test_124, test_308) -->
+    <test name="Security Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.security.SecurityTest" />
+        </classes>
+    </test>
+
+    <!-- 13. Performance Timing Tests (test_120, test_121, test_306) -->
+    <test name="Performance Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.performance.PerformanceTest" />
+        </classes>
+    </test>
+
+    <!-- 14. Responsive Compatibility Tests (test_116, test_117, test_202, test_305) -->
+    <test name="Compatibility Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.compatibility.CompatibilityTest" />
+        </classes>
+    </test>
+
+    <!-- 15. My Trips & Booking Management Tests (test_099, test_100, test_102) -->
+    <test name="My Trips Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.mytrips.MyTripsTest" />
+        </classes>
+    </test>
+
+    <!-- 16. Profile & Account Management Tests (test_128, test_132) -->
+    <test name="Profile Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.profile.ProfileTest" />
+        </classes>
+    </test>
+
+    <!-- 17. Usability & Accessibility Tests (test_125, test_289) -->
+    <test name="Usability and Accessibility Tests" preserve-order="true">
+        <classes>
+            <class name="com.easemytrip.tests.accessibility.AccessibilityTest" />
+            <class name="com.easemytrip.tests.usability.UsabilityTest" />
+        </classes>
+    </test>
+
+</suite>

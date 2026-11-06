@@ -1,0 +1,68 @@
+# =========================================================================
+# EaseMyTrip Automation Framework - Git Ignore Configuration
+# =========================================================================
+
+# Maven Build Artifacts
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Compiled Java Class Files
+*.class
+bin/
+
+# Execution Logs
+logs/
+*.log
+*.log.*
+*.log.gz
+
+# TestNG Execution Outputs
+test-output/
+testng-failed.xml
+testng-results.xml
+
+# ExtentReports & Captured Screenshots
+reports/
+reports/*.html
+reports/screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# Eclipse IDE
+.metadata/
+.recommenders/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code
+.vscode/
+
+# OS Generated Files
+Thumbs.db
+desktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
