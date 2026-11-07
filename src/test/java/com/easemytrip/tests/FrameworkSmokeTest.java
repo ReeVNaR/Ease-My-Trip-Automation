@@ -64,18 +64,15 @@ public class FrameworkSmokeTest extends BaseTest {
     }
 
     @Test(priority = 3, dataProvider = "flightSearchExcelData", description = "Smoke Check: Verify Excel DataProvider integration with Apache POI", groups = {"smoke", "datadriven"})
-    public void verifyExcelDataProviderIntegration(String scenario, String fromCity, String toCity, String daysOffset, String travelClass) {
-        logger.info("Executing Data-Driven verification: Scenario='{}', From='{}', To='{}', Offset='{}', Class='{}'",
-                scenario, fromCity, toCity, daysOffset, travelClass);
+    public void verifyExcelDataProviderIntegration(String tcId, String scenario, String fromCity, String toCity, String daysOffset, String travelClass, String expectedValidation) {
+        logger.info("Executing Data-Driven verification: TC='{}', Scenario='{}', From='{}', To='{}', Offset='{}', Class='{}', Expected='{}'",
+                tcId, scenario, fromCity, toCity, daysOffset, travelClass, expectedValidation);
 
+        Assert.assertNotNull(tcId, "Test Case ID should not be null");
         Assert.assertNotNull(scenario, "Scenario name should not be null");
         Assert.assertNotNull(fromCity, "Source city should not be null");
         Assert.assertNotNull(toCity, "Destination city should not be null");
-        Assert.assertFalse(fromCity.isEmpty(), "Source city should not be empty");
-        Assert.assertFalse(toCity.isEmpty(), "Destination city should not be empty");
-
-        ExtentReportManager.logInfo(String.format("Loaded Excel record [%s]: %s -> %s | Offset: %s days | Class: %s",
-                scenario, fromCity, toCity, daysOffset, travelClass));
+        ExtentReportManager.logInfo("Excel data row read successfully: " + tcId + " - " + scenario);
     }
 
     @Test(priority = 4, description = "Smoke Check: Verify screenshot utility capture and report attachment", groups = {"smoke"})

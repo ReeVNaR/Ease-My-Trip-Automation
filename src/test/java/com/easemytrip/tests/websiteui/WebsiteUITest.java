@@ -93,6 +93,9 @@ public class WebsiteUITest extends BaseTest {
         uiPage.waitForPageToLoad();
         JavaScriptUtils.scrollToBottom(getDriver());
         JavaScriptUtils.scrollToTop(getDriver());
-        ExtentReportManager.logPass("test_191: Scroll to bottom and return to top executed smoothly.");
+        Number scrollY = (Number) ((org.openqa.selenium.JavascriptExecutor) getDriver()).executeScript("return window.pageYOffset || document.documentElement.scrollTop;");
+        Assert.assertNotNull(scrollY, "Scroll Y position must be measurable");
+        Assert.assertTrue(scrollY.intValue() <= 150, "Window scroll offset should return near top, got: " + scrollY);
+        ExtentReportManager.logPass("test_191: Scroll to bottom and return to top executed and verified.");
     }
 }

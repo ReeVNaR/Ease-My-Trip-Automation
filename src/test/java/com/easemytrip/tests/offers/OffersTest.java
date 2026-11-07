@@ -31,12 +31,12 @@ public class OffersTest extends BaseTest {
         OffersPage offersPage = new OffersPage(getDriver());
         offersPage.waitForPageToLoad();
 
+        boolean filterAvailable = offersPage.isFlightOffersTabDisplayed() || offersPage.isAllOffersTabDisplayed();
+        Assert.assertTrue(filterAvailable, "At least one offer category filter (Flight or All Offers) must be displayed on Deals page");
         if (offersPage.isFlightOffersTabDisplayed()) {
             offersPage.selectFlightOffers();
-            ExtentReportManager.logPass("test_098: Flight Offers category filter selected.");
-        } else {
-            ExtentReportManager.logInfo("test_098: Category tabs dynamically rendered.");
         }
+        ExtentReportManager.logPass("test_098: Flight Offers category filter verified.");
     }
 
     @DataProvider(name = "offersData")

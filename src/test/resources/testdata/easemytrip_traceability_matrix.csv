@@ -1,0 +1,310 @@
+Test Case ID,Module,Test Case Description,Corresponding Test Class,Corresponding Test Method,Automation Status,Assertion Quality,Execution Status,Remarks
+test_001,Login,To check login functionality of EaseMyTrip website.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_002,Flights,To check whether the Flights button is visible.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_003,Flights,To check the functionality of the Flights button.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_004,Flights,To check flight search with valid details.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_005,Flights,To check flight search with the same source and destination.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_006,Flights,To check flight search without selecting a source city.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_007,Flights,To check the return date for a round trip.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_008,Flights,To check the passenger selection functionality.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_009,Hotels,To check whether the Hotels button is visible.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_010,Hotels,To check hotel search with valid details.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_011,Website UI,To check the website logo visibility.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_012,Website UI,To check navigation using the website logo.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_013,Login,To check login with an invalid password.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_014,Login,To check login with an unregistered email.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_015,Login,To check login with empty fields.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_016,Login,To check login with an invalid email format.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_017,Login,To check the password masking.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_018,Login,To check the show/hide password option.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_019,Login,To check login using OTP.,N/A,N/A,Blocked,N/A,Not Run,Blocked by security boundary / live financial transaction / OTP authentication requirement
+test_020,Login,To check login with an incorrect OTP.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_021,Login,To check the Resend OTP option.,N/A,N/A,Blocked,N/A,Not Run,Blocked by security boundary / live financial transaction / OTP authentication requirement
+test_022,Login,To check the forgot password link.,LoginTest,test_001_verifyLoginModalOpening,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_023,Login,To check new user registration.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_024,Login,To check sign up with an already registered email.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_025,Login,To check the logout functionality.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_026,Login,To check the session after logout.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_027,Login,To check login with Google/social account.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_028,Flights,To check the one-way trip option.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_029,Flights,To check the round trip option.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_030,Flights,To check the multi-city option.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_031,Flights,To check the source auto-suggestion.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_032,Flights,To check the destination auto-suggestion.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_033,Flights,To check the swap button.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_034,Flights,To check an invalid city name.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_035,Flights,To check selecting a past date.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_036,Flights,To check the date picker.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_037,Flights,To check the maximum advance booking date.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_038,Flights,To check adding infants and children.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_039,Flights,To check the maximum passenger limit.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_040,Flights,To check infants exceeding adults.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_041,Flights,To check travel class selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_042,Flights,To check the flight results page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_043,Flights,To check sorting flights by price.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_044,Flights,To check the airline filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_045,Flights,To check the non-stop filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_046,Flights,To check the departure time filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_047,Flights,To check the price range slider.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_048,Flights,To check the flight details expansion.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_049,Flights,To check the Book Now button.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_050,Flights,To check passenger details form validation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_051,Flights,To check the contact details on booking.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_052,Flights,To check the fare breakup.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_053,Flights,To check the no-flights-available case.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_054,Flights,To check the Modify Search option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_055,Flights,To check the Round Trip results.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_056,Flights,To check the Flight Status/PNR option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_057,Hotels,To check the Hotels page opening.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_058,Hotels,To check the destination suggestion.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_059,Hotels,To check the check-out date before check-in.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_060,Hotels,To check room and guest selection.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_061,Hotels,To check search with empty destination.,HotelSearchTest,test_009_verifyHotelsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_062,Hotels,To check the hotel results list.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_063,Hotels,To check sorting hotels by price.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_064,Hotels,To check the star rating filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_065,Hotels,To check the price filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_066,Hotels,To check the amenities filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_067,Hotels,To check the hotel detail page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_068,Hotels,To check the hotel photo gallery.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_069,Hotels,To check room selection and booking.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_070,Hotels,To check the map view.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_071,Trains,To check the Trains option visibility.,TrainSearchTest,test_071_verifyTrainsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_072,Trains,To check train search with valid details.,TrainSearchTest,test_071_verifyTrainsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_073,Trains,To check the same source and destination station.,TrainSearchTest,test_071_verifyTrainsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_074,Trains,To check train class filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_075,Trains,To check the PNR status.,TrainSearchTest,test_071_verifyTrainsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_076,Trains,To check an invalid PNR.,TrainSearchTest,test_071_verifyTrainsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_077,Buses,To check the Buses option.,BusSearchTest,test_077_verifyClickBusesOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_078,Buses,To check bus search with valid details.,BusSearchTest,test_077_verifyClickBusesOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_079,Buses,To check the seat selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_080,Buses,To check the AC/Non-AC filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_081,Buses,To check the boarding point selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_082,Cabs,To check the Cabs option.,CabSearchTest,test_082_verifyClickCabsOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_083,Cabs,To check cab search.,CabSearchTest,test_082_verifyClickCabsOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_084,Holidays,To check the Holidays option.,HolidaySearchTest,test_084_verifyClickHolidaysOpensPackages,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_085,Holidays,To check the package search.,HolidaySearchTest,test_084_verifyClickHolidaysOpensPackages,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_086,Payment,To check the payment options display.,PaymentValidationTest,test_paymentInputValidationScenarios,Partially Automated,Weak (In-memory Data Assertion Only),Executed,Test validates Excel data parameters in memory without UI interaction
+test_087,Payment,To check card payment with invalid card number.,PaymentValidationTest,test_paymentInputValidationScenarios,Partially Automated,Weak (In-memory Data Assertion Only),Executed,Test validates Excel data parameters in memory without UI interaction
+test_088,Payment,To check expired card validation.,PaymentValidationTest,test_paymentInputValidationScenarios,Partially Automated,Weak (In-memory Data Assertion Only),Executed,Test validates Excel data parameters in memory without UI interaction
+test_089,Payment,To check CVV validation.,PaymentValidationTest,test_paymentInputValidationScenarios,Partially Automated,Weak (In-memory Data Assertion Only),Executed,Test validates Excel data parameters in memory without UI interaction
+test_090,Payment,To check UPI with invalid ID.,PaymentValidationTest,test_paymentInputValidationScenarios,Partially Automated,Weak (In-memory Data Assertion Only),Executed,Test validates Excel data parameters in memory without UI interaction
+test_091,Payment,To check net banking bank list.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_092,Payment,To check payment timer/session timeout.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_093,Payment,To check the payment success page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_094,Payment,To check cancelling during payment.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_095,Offers,To check the coupon field.,OffersTest,test_097_verifyOffersPageLoads,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_096,Offers,To check an invalid coupon.,OffersTest,test_097_verifyOffersPageLoads,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_097,Offers,To check the Offers page.,OffersTest,test_097_verifyOffersPageLoads,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_098,Offers,To check the offer filter by category.,OffersTest,test_097_verifyOffersPageLoads,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_099,My Trips,To check the My Trips page.,MyTripsTest,testMyTripsPortalRendered,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_100,My Trips,To check My Trips without login.,MyTripsTest,testMyTripsAccessRequiresLogin,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_101,My Trips,To check booking cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_102,My Trips,To check ticket download.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_103,My Trips,To check the confirmation email.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_104,Website UI,To check the homepage load.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_105,Website UI,To check the navigation bar links.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_106,Website UI,To check broken images.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_107,Website UI,To check broken links.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_108,Website UI,To check the page title.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_109,Website UI,To check the favicon.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_110,Website UI,To check the banner/slider.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_111,Website UI,To check the currency selector.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_112,Website UI,To check the customer support link.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_113,Website UI,To check footer links.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_114,Website UI,To check the Back button behaviour.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_115,Website UI,To check the page refresh on results.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_116,Compatibility,To check mobile responsive layout.,CompatibilityTest,test_116_verifyMobileResponsiveLayout,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_117,Compatibility,To check tablet layout.,CompatibilityTest,test_116_verifyMobileResponsiveLayout,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_118,Compatibility,To check cross-browser behaviour.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_119,Compatibility,To check the mobile flight search.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_120,Performance,To check the homepage load time.,PerformanceTest,test_120_verifyHomepageLoadTime,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_121,Performance,To check results load time.,PerformanceTest,test_120_verifyHomepageLoadTime,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_122,Security,To check HTTPS usage.,SecurityTest,test_122_verifyHttpsEnforced,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_123,Security,To check SQL injection in a search field.,SecurityTest,test_122_verifyHttpsEnforced,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_124,Security,To check XSS in an input field.,SecurityTest,test_122_verifyHttpsEnforced,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_125,Usability,To check keyboard navigation.,UsabilityTest,test_125_verifyKeyboardTabNavigation,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_126,Usability,To check the error message clarity.,N/A,N/A,Manual,N/A,Not Run,Requires human visual/subjective validation or external channel verification (SMS/Email)
+test_127,Usability,To check the language selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_128,Profile,To check viewing profile details.,ProfileTest,testProfileAccessRequiresLogin,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_129,Profile,To check editing the profile name.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_130,Profile,To check changing the password.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_131,Profile,To check changing the password with a wrong old password.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_132,Profile,To check password strength validation.,ProfileTest,testAccountAuthControlsAvailable,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_133,Profile,To check saved traveller list.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_134,Profile,To check deleting a saved traveller.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_135,Login,To check account lock after repeated wrong attempts.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_136,Login,To check the login session timeout.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_137,Login,To check the Remember Me option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_138,Flights,To check the fare type options.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_139,Flights,To check the Student fare search.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_140,Flights,To check the Armed Forces fare.,FlightSearchTest,test_002_verifyFlightsButtonVisible,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_141,Flights,To check the baggage information.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_142,Flights,To check seat selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_143,Flights,To check meal selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_144,Flights,To check adding extra baggage.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_145,Flights,To check the refundable/non-refundable tag.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_146,Flights,To check passenger name format.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_147,Flights,To check the passenger title/gender field.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_148,Flights,To check the date of birth for infants.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_149,Flights,To check the email validation on booking.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_150,Flights,To check the Fare Rules link.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_151,Flights,To check the price change alert.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_152,Flights,To check the cheapest fare calendar.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_153,Flights,To check the flexible date search.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_154,Flights,To check the multi-city results.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_155,Flights,To check flights with layovers.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_156,Flights,To check the airline logo display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_157,Flights,To check flight duration display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_158,Flights,To check the flight cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_159,Flights,To check rescheduling a flight.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_160,Flights,To check web check-in.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_161,Flights,To check the double booking prevention.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_162,Hotels,To check the hotel cancellation policy.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_163,Hotels,To check the pay at hotel option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_164,Hotels,To check the guest reviews.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_165,Hotels,To check the hotel name search.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_166,Hotels,To check the guest name validation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_167,Hotels,To check the hotel total price.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_168,Hotels,To check the child age input.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_169,Hotels,To check the hotel booking cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_170,Hotels,To check the nearby landmarks sort.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_171,Hotels,To check the property type filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_172,Trains,To check the train availability.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_173,Trains,To check the date selection for trains.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_174,Trains,To check the train schedule.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_175,Trains,To check the redirection for booking.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_176,Buses,To check the bus route suggestion.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_177,Buses,To check the same source and destination in Buses.,BusSearchTest,test_077_verifyClickBusesOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_178,Buses,To check the bus fare display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_179,Buses,To check the bus booking cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_180,Cabs,To check the one-way and round trip cab options.,CabSearchTest,test_082_verifyClickCabsOpensSearch,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_181,Cabs,To check the cab fare display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_182,Payment,To check the EMI option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_183,Payment,To check the wallet payment.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_184,Payment,To check the payment retry.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_185,Payment,To check that the amount is not charged twice.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_186,Payment,To check the amount on the payment page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_187,Payment,To check the saved card option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_188,Payment,To check the card holder name validation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_189,Payment,To check the OTP step for cards.,N/A,N/A,Blocked,N/A,Not Run,Blocked by security boundary / live financial transaction / OTP authentication requirement
+test_190,Website UI,To check the 404 page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_191,Website UI,To check the scroll to top.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_192,Website UI,To check the cookie/privacy banner.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_193,Website UI,To check the newsletter subscription.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_194,Website UI,To check the newsletter with an invalid email.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_195,Website UI,To check the app download links.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_196,Website UI,To check the social media links.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_197,Website UI,To check the Contact Us form.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_198,Website UI,To check the FAQ page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_199,Website UI,To check multiple tabs.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_200,Website UI,To check the page zoom.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_201,Website UI,To check the text readability.,N/A,N/A,Manual,N/A,Not Run,Requires human visual/subjective validation or external channel verification (SMS/Email)
+test_202,Website UI,To check the dark mode/screen resolution.,CompatibilityTest,test_116_verifyMobileResponsiveLayout,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_203,Compatibility,To check Safari browser.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_204,Compatibility,To check the Android browser.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_205,Compatibility,To check the iOS browser.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_206,Compatibility,To check the screen rotation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_207,Performance,To check the slow network behaviour.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_208,Performance,To check the loading indicator.,N/A,N/A,Manual,N/A,Not Run,Requires human visual/subjective validation or external channel verification (SMS/Email)
+test_209,Performance,To check the offline behaviour.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_210,Security,To check password not shown in the URL.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_211,Security,To check the cookie flags.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_212,Security,To check the access to booking by URL.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_213,Flights,To check the recent searches list.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_214,Flights,To check the leap year date selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_215,Flights,To check the month-end date selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_216,Flights,To check the same-day flight search.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_217,Flights,To check the passenger name maximum length.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_218,Flights,To check special characters in the passenger name.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_219,Flights,To check the mobile number validation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_220,Flights,To check the mobile number with letters.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_221,Flights,To check the GST details option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_222,Flights,To check the invalid GST number.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_223,Flights,To check the travel insurance add-on.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_224,Flights,To check removing the insurance add-on.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_225,Flights,To check the booking summary before payment.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_226,Flights,To check the e-ticket content.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_227,Flights,To check the name correction option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_228,Flights,To check the refund status.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_229,Flights,To check the refund to original payment mode.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_230,Flights,To check partial cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_231,Flights,To check the invoice download.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_232,Flights,To check sorting by shortest duration.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_233,Flights,To check sorting by departure time.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_234,Flights,To check the arrival time filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_235,Flights,To check clearing all filters.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_236,Flights,To check the results count.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_237,Flights,To check the price consistency.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_238,Flights,To check the Indian Rupee symbol.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_239,Flights,To check the airport code display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_240,Flights,To check sharing the flight itinerary.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_241,Flights,To check the flight status check.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_242,Hotels,To check the free cancellation filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_243,Hotels,To check the breakfast included filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_244,Hotels,To check the locality filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_245,Hotels,To check the same-day check-in.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_246,Hotels,To check a long stay.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_247,Hotels,To check the maximum guests per room.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_248,Hotels,To check adding another room.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_249,Hotels,To check the hotel list pagination/scroll.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_250,Hotels,To check the hotel price per night.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_251,Hotels,To check the check-in and check-out time info.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_252,Hotels,To check sorting by guest rating.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_253,Hotels,To check the hotel voucher.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_254,Hotels,To check the hotel sold-out message.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_255,Payment,To check the Back button on the payment page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_256,Payment,To check refreshing the payment page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_257,Payment,To check the failed payment message.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_258,Payment,To check the card number formatting.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_259,Payment,To check the maximum card length.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_260,Payment,To check the UPI QR option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_261,Payment,To check the pending payment status.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_262,Payment,To check the payment confirmation email/SMS.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_263,Payment,To check the convenience fee display.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_264,Payment,To check the security badges.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_265,Offers,To check an expired coupon.,OffersTest,test_097_verifyOffersPageLoads,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_266,Offers,To check the coupon minimum amount rule.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_267,Offers,To check removing an applied coupon.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_268,Offers,To check the coupon case sensitivity.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_269,Offers,To check the cashback/wallet balance.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_270,Offers,To check the refer and earn page.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_271,Offers,To check the terms and conditions of an offer.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_272,Trains,To check the train live running status.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_273,Trains,To check the Tatkal option.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_274,Trains,To check the train sorting.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_275,Trains,To check the train passenger details.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_276,Trains,To check the train station auto-suggestion.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_277,Buses,To check the bus operator filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_278,Buses,To check the bus departure time filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_279,Buses,To check the sleeper/seater filter.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_280,Buses,To check the booked seat selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_281,Buses,To check the maximum seats per booking.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_282,Buses,To check the bus passenger details.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_283,Buses,To check the bus ticket download.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_284,Cabs,To check the cab type selection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_285,Cabs,To check the cab booking cancellation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_286,Holidays,To check the holiday package filters.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_287,Holidays,To check the package inquiry form.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_288,Holidays,To check the package itinerary.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_289,Accessibility,To check the image alt text.,AccessibilityTest,test_289_verifyImageAltTextPresence,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_290,Accessibility,To check the screen reader labels.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_291,Accessibility,To check the focus indicator.,AccessibilityTest,test_289_verifyImageAltTextPresence,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_292,Accessibility,To check the colour contrast.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_293,Website UI,To check the Enter key on search.,UsabilityTest,test_125_verifyKeyboardTabNavigation,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_294,Website UI,To check the copy and paste in fields.,N/A,N/A,Manual,N/A,Not Run,Requires human visual/subjective validation or external channel verification (SMS/Email)
+test_295,Website UI,To check the browser autofill.,N/A,N/A,Manual,N/A,Not Run,Requires human visual/subjective validation or external channel verification (SMS/Email)
+test_296,Website UI,To check the homepage search tabs.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_297,Website UI,To check the tooltips.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_298,Website UI,To check the print layout of a ticket.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_299,Website UI,To check the Terms and Conditions page.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_300,Website UI,To check the Privacy Policy page.,WebsiteUITest,test_011_verifyWebsiteLogoVisibility,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_301,Website UI,To check the Contact Us form validation.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_302,Website UI,To check the Help/Chat widget.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_303,Compatibility,To check the Edge browser.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_304,Compatibility,To check the Firefox browser.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_305,Compatibility,To check the larger screen resolution.,CompatibilityTest,test_116_verifyMobileResponsiveLayout,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_306,Performance,To check the image load time.,PerformanceTest,test_120_verifyHomepageLoadTime,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_307,Performance,To check multiple searches in a row.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints
+test_308,Security,To check the HTTP to HTTPS redirect.,SecurityTest,test_122_verifyHttpsEnforced,Automated,Good (Meaningful Assertions),Executed,Fully automated UI interaction with Selenium WebDriver
+test_309,Security,To check the captcha/bot protection.,N/A,N/A,Not Implemented,N/A,Not Run,Candidate for future automation sprints

@@ -24,9 +24,13 @@ public class AccessibilityTest extends BaseTest {
 
         int altCount = 0;
         for (WebElement img : images) {
-            String alt = img.getAttribute("alt");
-            if (alt != null && !alt.trim().isEmpty()) {
-                altCount++;
+            try {
+                String alt = img.getAttribute("alt");
+                if (alt != null && !alt.trim().isEmpty()) {
+                    altCount++;
+                }
+            } catch (Exception e) {
+                // Ignore stale elements in dynamic banners
             }
         }
         logger.info("Found {} images with non-empty alt text attributes", altCount);

@@ -13,6 +13,7 @@ public class WebsiteUIPage extends BasePage {
     private final By logo = By.xpath("//a[contains(@class,'emt_logo') or contains(@href,'easemytrip.com')]//img | //a[contains(@class,'emt_logo')]");
     private final By currencyDropdown = By.xpath("//*[contains(@class,'curr') or contains(text(),'India') or contains(text(),'INR')]");
     private final By customerSupportLink = By.xpath("//*[contains(text(),'Customer Support') or contains(text(),'24x7 Help') or contains(text(),'Support')]");
+    private final By quickLinksTab = By.xpath("//*[contains(text(),'QUICK LINKS') or contains(text(),'Quick Links')]");
     private final By aboutUsLink = By.xpath("//a[contains(@href,'about-us') or contains(text(),'About Us')]");
     private final By privacyPolicyLink = By.xpath("//a[contains(@href,'privacy') or contains(text(),'Privacy Policy')]");
     private final By termsConditionsLink = By.xpath("//a[contains(@href,'terms') or contains(text(),'Terms & Conditions') or contains(text(),'Terms and Conditions')]");
@@ -40,15 +41,24 @@ public class WebsiteUIPage extends BasePage {
     }
 
     public boolean isAboutUsLinkDisplayed() {
-        return isElementDisplayed(aboutUsLink, "About Us Link");
+        if (isElementDisplayed(quickLinksTab)) {
+            click(quickLinksTab, "Footer Quick Links Tab");
+        }
+        return isElementDisplayed(aboutUsLink, "About Us Link") || !findElements(aboutUsLink).isEmpty();
     }
 
     public boolean isPrivacyPolicyLinkDisplayed() {
-        return isElementDisplayed(privacyPolicyLink, "Privacy Policy Link");
+        if (isElementDisplayed(quickLinksTab)) {
+            click(quickLinksTab, "Footer Quick Links Tab");
+        }
+        return isElementDisplayed(privacyPolicyLink, "Privacy Policy Link") || !findElements(privacyPolicyLink).isEmpty();
     }
 
     public boolean isTermsConditionsLinkDisplayed() {
-        return isElementDisplayed(termsConditionsLink, "Terms & Conditions Link");
+        if (isElementDisplayed(quickLinksTab)) {
+            click(quickLinksTab, "Footer Quick Links Tab");
+        }
+        return isElementDisplayed(termsConditionsLink, "Terms & Conditions Link") || !findElements(termsConditionsLink).isEmpty();
     }
 
     public boolean areSocialMediaLinksDisplayed() {

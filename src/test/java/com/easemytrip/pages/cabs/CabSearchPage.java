@@ -10,9 +10,9 @@ import org.openqa.selenium.WebDriver;
  */
 public class CabSearchPage extends BasePage {
 
-    private final By fromLocationInput = By.xpath("//input[contains(@id,'From') or contains(@placeholder,'Pick-up') or contains(@id,'txtFromCity')]");
-    private final By toLocationInput = By.xpath("//input[contains(@id,'To') or contains(@placeholder,'Drop') or contains(@id,'txtToCity')]");
-    private final By searchCabsButton = By.xpath("//input[contains(@value,'Search') or contains(@value,'SEARCH')] | //button[contains(text(),'Search') or contains(text(),'SEARCH')] | //*[contains(@class,'srchBtn')]");
+    private final By fromLocationInput = By.xpath("//*[@id='sourceName' or @id='hrlysrc' or contains(text(),'From (Pick-up)')] | //input[@id='a_FromSector_show']");
+    private final By toLocationInput = By.xpath("//*[@id='destinationName' or contains(text(),'To (Drop-off)')] | //input[@id='a_ToSector_show']");
+    private final By searchCabsButton = By.xpath("//*[contains(@class,'srch-btn-c') or contains(text(),'SEARCH')] | //input[contains(@value,'Search')] | //button[contains(text(),'Search')]");
     private final By roundTripOption = By.xpath("//*[contains(text(),'Round Trip') or contains(@for,'round')]");
     private final By oneWayOption = By.xpath("//*[contains(text(),'One Way') or contains(@for,'oneway')]");
 
