@@ -29,13 +29,15 @@ test-output/
 testng-failed.xml
 testng-results.xml
 
-# ExtentReports & Captured Screenshots
-reports/
-reports/*.html
-reports/screenshots/
+# ExtentReports & Captured Screenshots (output reports at repository root)
+/reports/
+!src/test/java/com/easemytrip/reports/
+!src/test/java/com/easemytrip/reports/**
 *.png
 *.jpg
 *.jpeg
+!src/test/resources/**/*.png
+!src/test/resources/**/*.jpg
 
 # Eclipse IDE
 .metadata/

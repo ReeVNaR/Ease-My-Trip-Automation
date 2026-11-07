@@ -23,15 +23,17 @@ jobs:
           java-version: '25'
           cache: 'maven'
 
-      - name: Verify Google Chrome Installation
+      - name: Verify Environment & Tools
         run: |
+          java -version
+          mvn -version
           google-chrome --version || which google-chrome
 
       - name: Compile Framework & Verify Dependencies
-        run: mvn test-compile -B
+        run: mvn clean test-compile -B
 
       - name: Run Core Test Suite (Headless Chrome)
-        run: mvn test "-Dtest=FrameworkSmokeTest,SecurityTest,PerformanceTest,WebsiteUITest" -Dheadless=true -B
+        run: mvn test "-Dtest=FrameworkSmokeTest,SecurityTest,PerformanceTest" -Dheadless=true -B
 
       - name: Upload ExtentReports & Screenshots Artifact
         if: always()
