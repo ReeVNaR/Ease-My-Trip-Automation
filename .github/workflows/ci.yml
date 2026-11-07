@@ -1,0 +1,45 @@
+name: EaseMyTrip Automation CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  smoke-and-regression:
+    name: Headless Regression on Java 25
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Oracle JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '25'
+          cache: 'maven'
+
+      - name: Verify Google Chrome Installation
+        run: |
+          google-chrome --version || which google-chrome
+
+      - name: Compile Framework & Verify Dependencies
+        run: mvn test-compile -B
+
+      - name: Run Core Test Suite (Headless Chrome)
+        run: mvn test "-Dtest=FrameworkSmokeTest,SecurityTest,PerformanceTest,WebsiteUITest" -Dheadless=true -B
+
+      - name: Upload ExtentReports & Screenshots Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: EaseMyTrip-Test-Execution-Reports
+          path: |
+            reports/*.html
+            reports/screenshots/*.png
+            logs/automation.log
+          retention-days: 14
